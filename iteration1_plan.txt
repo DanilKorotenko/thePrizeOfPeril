@@ -1,0 +1,13 @@
+Objects: 
+	"TV receiver" - comments all player actions.
+		Player can turn it on or off.
+		Produce comments in background.
+
+locations:
+	hotel room:
+		door - guarded by killers
+		window - guarded by killers
+	hotel bathroom
+		small hole on the floor
+		wall - solid wall
+		window - appeared only if "TV receiver" is on and after investigating hole on the floor.
