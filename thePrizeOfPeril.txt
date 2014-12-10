@@ -6,6 +6,8 @@ The late Robert Sheckley was one of science fiction's premiere satirists and hum
 Two of his most famous stories, "The Seventh Victim" and the story that follows, "The Prize of Peril," predicted the twin crazes of reality TV and Adventure Gaming more than forty years before they actually came into existence—and still bear palpable stings in their sleek and shiny tails even to this very day.
 
 
+INT. Hotel
+
 RAEDER lifted his head cautiously above the windowsill. He saw the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As he watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. Raeder ducked down. A bullet smashed through the window above his head and punctured the ceiling, showering him with plaster.
 Now he knew about the alley. It was guarded, just like the door.
 He lay at full length on the cracked linoleum, staring at the bullet hole in the ceiling, listening to the sounds outside the door. He was a tall man with bloodshot eyes and a two-day stubble. Grime and fatigue had etched lines into his face. Fear had touched his features, tightening a muscle here and twitching a nerve there. The results were startling. His face had character now, for it was reshaped by the expectation of death.
@@ -34,7 +36,10 @@ Raeder waited, and heard the hinges tearing out of rotten wood.
 "Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—"
 Raeder pushed the television set into his pocket. He located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. He cleared the jagged sill and quickly peered down.
 Below was a long drop to a concrete courtyard.
-The hinges tore free. He heard the door opening. Quickly Raeder climbed through the window, hung by his fingertips for a moment, and dropped.
+The hinges tore free. He heard the door opening.
+
+EXT. Courtyard
+Quickly Raeder climbed through the window, hung by his fingertips for a moment, and dropped.
 The shock was stunning. Groggily he stood up. A face appeared at the bathroom window.
 "Tough luck," said the man, leaning out and taking careful aim with a snub-nosed .38.
 At that moment a smoke bomb exploded inside the bathroom.

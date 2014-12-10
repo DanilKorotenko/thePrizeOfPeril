@@ -1,0 +1,7 @@
+1. Hotel
+	- room
+	- bathroom
+
+2. Hotel courtyard
+
+3. 
