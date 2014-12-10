@@ -1,0 +1,5 @@
+TV receiver
+	comments every player action
+
+Watch
+	shows time to the end of game.
