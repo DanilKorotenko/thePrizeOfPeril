@@ -39,6 +39,7 @@ Below was a long drop to a concrete courtyard.
 The hinges tore free. He heard the door opening.
 
 EXT. Courtyard
+
 Quickly Raeder climbed through the window, hung by his fingertips for a moment, and dropped.
 The shock was stunning. Groggily he stood up. A face appeared at the bathroom window.
 "Tough luck," said the man, leaning out and taking careful aim with a snub-nosed .38.
@@ -49,6 +50,8 @@ He could hear Mike Terry's frenzied voice over the TV set in his pocket. "Now ru
 
 * * *
 
+EXT. 63rd Street
+
 HE walked down 63rd Street, slouching to minimize his height, staggering slightly from exertion, dizzy from lack of food and sleep.
 "Hey, you!"
 Raeder turned. A middle-aged woman was sitting on the steps of a brownstone, frowning at him.
@@ -57,6 +60,9 @@ Raeder started to walk away.
 "Come inside here, Raeder," the woman said.
 Perhaps it was a trap. But Raeder knew that he had to depend upon the generosity and good-heartedness of the people. He was their representative, a projection of themselves, an average guy in trouble. Without them, he was lost. With them, nothing could harm him.
 Trust in the people, Mike Terry had told him. They'll never let you down.
+
+INT. Mrs. Velma O'Dell house
+
 He followed the woman into her parlor. She told him to sit down and left the room, returning almost immediately with a plate of stew. She stood watching him while he ate, as one would watch an ape in the zoo eat peanuts.
 Two children came out of the kitchen and stared at him.
 Three overalled men came out of the bedroom and focused a television camera on him. There was a big television set in the parlor. As he gulped his food, Raeder watched the image of Mike Terry and listened to the man's strong, sincere, worried voice.
@@ -80,10 +86,18 @@ Raeder hadn't realized until now that he'd cut his hand on the windowsill.
 Raeder thanked her and left. He walked to Broadway, caught a subway to 59th Street, then an uptown local to 86th. There he bought a newspaper and changed for the Manhasset through-express.
 He glanced at his watch. He had six and a half hours to go.
 * * *
+
+INT. subway
+
 THE subway roared under Manhattan. Raeder dozed, his bandaged hand concealed under the newspaper, the hat pulled over his face. Had he been recognized yet? Had he shaken the Thompson gang? Or was someone telephoning them now?
 Dreamily he wondered if he had escaped death, or was he still a cleverly animated corpse, moving around because of death's inefficiency? (My dear, death is so laggard these days! Jim Raeder walked about for hours after he died and actually answered people's questions before he could be decently buried!)
 Raeder's eyes snapped open. He had dreamed something ... unpleasant. He couldn't remember what.
+
+
 He closed his eyes again and remembered, with mild astonishment, a time when he had been in no trouble.
+
+FLASHBACK:
+
 That was two years ago. He had been a big, pleasant young man working as a truck driver's helper. He had no talents. He was too modest to have dreams.
 The tight-faced little truck driver had the dreams for him. "Why not try for a television show, Jim? I would if I had your looks. They like nice, average guys with nothing much on the ball. As contestants. Everybody likes guys like that. Why not look into it?"
 So he had looked into it. The owner of the local television store had explained it further.
@@ -134,14 +148,30 @@ That did it. Raeder surfaced and presented the treasure at the standby boat. It 
 That netted him twenty-two thousand dollars in cash and prizes, and three hundred and eight fan letters, and an interesting proposition from a girl in Macon, which he seriously considered. He received free hospitalization for his knife slash and burst eardrum, and injections for coral infection.
 But best of all, he was invited to appear on the biggest of the thrill shows. The Prize of Peril.
 And that was when the real trouble began .. .
+
+END OF FLASHBACK.
+
+INT. subway
+
 The subway came to a stop, jolting him out of his reverie. Raeder pushed back his hat and observed, across the aisle, a man staring at him and whispering to a stout woman. Had they recognized him?
 He stood up as soon as the doors opened, and glanced at his watch. He had five hours to go.
+
+
 * * *
+
+INT. Manhasset station
+
 AT the Manhasset station, he stepped into a taxi and told the driver to take him to New Salem.
+
+INT. Taxi
+
 "New Salem?" the driver asked, looking at him in the rear-vision mirror.
 "That's right."
 The driver snapped on his radio. "Fare to New Salem. Yep, that's right. New Salem." They drove off. Raeder frowned, wondering if it had been a signal. It was perfectly usual for taxi drivers to report to their dispatchers, of course. But something about the man's voice .. .
 "Let me off here," Raeder said.
+
+EXT. country road
+
 He paid the driver and began walking down a narrow
 country road that curved through sparse woods. The trees were too small and too widely separated for shelter. Raeder walked on, looking for a place to hide.
 There was a heavy truck approaching. He kept on walking, pulling his hat low on his forehead. But as the truck drew near, he heard a voice from the television set in his pocket. It cried, "Watch out!"
@@ -150,8 +180,14 @@ Bullets clipped leaves from the trees as Raeder sprinted into the woods.
 "It's happened again!" Mike Terry was saying, his voice high-pitched with excitement. "I'm afraid Jim Raeder let himself be lulled into a false sense of security. You can't do that, Jim! Not with your life at stake! Not with killers pursuing you! Be careful, Jim, you still have four and a half hours to go!"
 The driver was saying, "Claude, Harry, go around with the truck. We got him boxed."
 "They've got you boxed, Jim Raeder!" Mike Terry cried. "But they haven't got you yet! And you can thank Good Samaritan Susy Peters of twelve Elm Street, South Orange, New Jersey, for that warning shout just when the truck was bearing down on you. We'll have little Susy on stage in just a moment ... Look, folks, our studio helicopter has arrived on the scene. Now you can see Jim Raeder running, and the killers pursuing, surrounding him ..."
+
+EXT. concrete highway
+
 Raeder ran through a hundred yards of woods and found himself on a concrete highway, with open woods beyond. One of the killers was trotting through the woods behind him. The truck had driven to a connecting road and was now a mile away, coming toward him.
 A car was approaching from the other direction. Raeder ran into the highway, waving frantically. The car came to a stop.
+
+INT. Janice Morrow car
+
 "Hurry!" cried the blond young woman driving it. Raeder dived in. The woman made a U-turn on the
 highway. A bullet smashed through the windshield. She stamped on the accelerator, almost running down the lone killer who stood in the way.
 The car surged away before the truck was within firing range.
@@ -190,6 +226,9 @@ He opened the door.
 "Wait" She leaned over and kissed him on the lips. "Good luck, you idiot. Call me if you make it."
 And then he was on foot, running into the woods.
 * * *
+
+EXT. inhabitant zone
+
 HE ran through birch and pine, past an occasional split-level house with staring faces at the big picture windows. Some occupant of those houses must have called the gang, for they were close behind him when he reached the washed-out little ravine. Those quiet, mannerly, law-abiding people didn't want him to escape, Raeder thought sadly. They wanted to see a killing. Or perhaps they wanted to see him narrowly escape a killing.
 It came to the same thing, really.
 He entered the ravine, burrowed into the thick underbrush and lay still. The Thompsons appeared on both ridges, moving slowly, watching for any movement. Raeder held his breath as they came parallel to him.
@@ -202,6 +241,9 @@ Raeder finished his prayer. Glancing at his watch, he saw that he had nearly two
 And he didn't want to die. It wasn't worth it, no matter how much they paid! He must have been crazy, absolutely insane to agree to such a thing .. .
 But he knew that wasn't true. And he remembered just how sane he had been.
 * * *
+
+FLASHBACK:
+
 ONE week ago, he had been on The Prize of Peril stage, blinking in the spotlight, and Mike Terry had shaken his hand.
 "Now, Mr. Raeder," Terry had said solemnly, "do you understand the rules of the game you are about to play?" Raeder nodded.
 "If you accept, Jim Raeder, you will be a hunted man for a week. Killers will follow you, Jim. Trained killers, men wanted by the law for other crimes, granted immunity for this single killing under the Voluntary Suicide Act. They will be trying to kill you, Jim. Do you understand?"
@@ -226,6 +268,11 @@ Mike Terry put a hand on Raeder's shoulder. "Here is the man who has agreed to b
 "We'll get him," Thompson said.
 "And one thing more," Terry said, very softly. "Jim Raeder does not stand alone. The folks of America are for him. Good Samaritans from all corners of our great nation stand ready to assist him. Unarmed, defenseless, Jim Raeder can count on the aid and goodheartedness of the people, whose representative he is. So don't be too sure, Claude Thompson! The average men are for Jim Raeder—and there are a lot of average men!"
 * * *
+
+END OF FLASHBACK
+
+EXT. inhabitant zone
+
 RAEDER thought about it, lying motionless in the underbrush. Yes, the people had helped him. But they had helped the killers, too.
 A tremor ran through him. He had chosen, he reminded himself. He alone was responsible. The psychological test had proved that.
 And yet, how responsible were the psychologists who had given him the test? How responsible was Mike Terry for offering a poor man so much money? Society had woven the noose and put it around his neck, and he was hanging himself with it and calling it free will.
@@ -240,15 +287,25 @@ A madman, thought Raeder. The damned fool must think he's playing Hare and Hound
 Cursing, Raeder sprang to his feet and began running. He carne out of the ravine and saw a white building in the distance. He turned toward it. Behind him he could still hear the man.
 "That way, over there. Look, you fools, can't you see him yet?"
 The killers were shooting again. Raeder ran, stumbling over uneven ground, past three children playing in a tree house.
-"Here he is!" the children screamed. "Here he is!" Raeder groaned and ran on. He reached the steps of the building and saw that it was a church.
+"Here he is!" the children screamed. "Here he is!" Raeder groaned and ran on. 
+
+INT. church
+
+He reached the steps of the building and saw that it was a church.
 As he opened the door, a bullet struck him behind the right kneecap.
 He fell, and crawled inside the church.
 The television set in his pocket was saying, "What a finish, folks, what a finish! Raeder's been hit! He's been hit, folks, he's crawling now, he's in pain, but he hasn't given up! NOT Jim Raeder!"
 Raeder lay in the aisle near the altar. He could hear a child's eager voice saying, "He went in there, Mr. Thompson. Hurry, you can still catch him!"
 Wasn't a church considered a sanctuary? Raeder wondered.
 Then the door was flung open, and Raeder realized that the custom was no longer observed. He gathered himself together and crawled past the altar, out of the back door of the church.
+
+EXT. graveyard
+
 He was in an old graveyard. He crawled past crosses and stars, past slabs of marble and granite, past stone tombs and rude wooden markers. A bullet exploded on a tombstone near his head, showering him with fragments. He crawled to the edge of an open grave.
 They had deceived him, he thought. All of those nice, average, normal people. Hadn't they said he was their representative? Hadn't they sworn to protect their own? But no, they loathed him. Why hadn't he seen it? Their hero was the cold, blank-eyed gunman: Thompson, Capone, Billy the Kid, Young Lochinvar, El Cid, Cuchulain, the man without human hopes or fears. They worshipped him, that dead, implacable robot gunman, and lusted to feel his foot in their face.
+
+INT. open grave
+
 Raeder tried to move, and slid helplessly into the open grave.
 He lay on his back, looking at the blue sky. Presently a black silhouette loomed above him, blotting out the sky. Metal twinkled. The silhouette slowly took aim.
 And Raeder gave up all hope forever.
