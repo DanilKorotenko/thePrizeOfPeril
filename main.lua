@@ -12,16 +12,19 @@ main = room
 	nam = 'The Prize of Peril',
 	dsc = "This game is based on Robert Shekley novell."..[[^^
 	Implementation: Danil Korotenko (danil.korotenko@gmail.com).]],
-	obj = { vway("next", "Click {here} to play.", 'hotel_room') }
+	obj = 
+	{ 
+		vway("next", "Click {here} to play.", 'hotelRoom') 
+	}
 };
 
-hotel_room = room 
+hotelRoom = room 
 {
 	nam = 'Hotel Room',
 	dsc = [[]],
 }
 
-hotel_bathroom = room 
+hotelBathroom = room 
 {
 	nam = 'Hotel Bathroom',
 	dsc = [[]]
@@ -39,7 +42,7 @@ street = room
 	dsc = [[]]
 }
 
-mrs_velma_o_dell_house = room 
+mrsVelmaODellHouse = room 
 {
 	nam = "Mrs. Velma O'Dell house",
 	dsc = [[]]
@@ -51,19 +54,13 @@ subway = room
 	dsc = [[]]
 }
 
-subway_flashback = room 
+subwayFlashback = room 
 {
 	nam = "Subway Flashback",
 	dsc = [[]]
 }
 
-manhasset_station = room 
-{
-	nam = "Manhasset station",
-	dsc = [[]]
-}
-
-manhasset_station = room 
+manhassetStation = room 
 {
 	nam = "Manhasset station",
 	dsc = [[]]
@@ -75,31 +72,31 @@ taxi = room
 	dsc = [[]]
 }
 
-country_road = room 
+countryRoad = room 
 {
 	nam = "Country Road",
 	dsc = [[]]
 }
 
-concrete_highway = room 
+concreteHighway = room 
 {
 	nam = "Concrete Highway",
 	dsc = [[]]
 }
 
-janice_morrow_car = room 
+janiceMorrowCar = room 
 {
 	nam = "Janice Morrow car",
 	dsc = [[]]
 }
 
-inhabitant_zone = room 
+inhabitantZone = room 
 {
 	nam = "Inhabitant Zone",
 	dsc = [[]]
 }
 
-inhabitant_zone_flashback = room 
+inhabitantZoneFlashback = room 
 {
 	nam = "Inhabitant Zone Flashback",
 	dsc = [[]]
@@ -117,7 +114,7 @@ graveyard = room
 	dsc = [[]]
 }
 
-open_grave = room 
+openGrave = room 
 {
 	nam = "Open Grave",
 	dsc = [[]]
