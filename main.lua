@@ -7,114 +7,178 @@ game.act = 'Action is undefined.';
 game.inv = "Inventory is undefined";
 game.use = 'Use is undefined';
 
-main = room 
+main = room
 {
 	nam = 'The Prize of Peril',
 	dsc = "This game is based on Robert Shekley novell."..[[^^
 	Implementation: Danil Korotenko (danil.korotenko@gmail.com).]],
-	obj = 
-	{ 
-		vway("next", "Click {here} to play.", 'hotelRoom') 
+	obj =
+	{
+		vway("next", "Click {here} to play.", 'hotelRoom')
 	}
 };
 
-hotelRoom = room 
+hotelRoom = room
 {
 	nam = 'Hotel Room',
 	dsc = [[]],
+	obj =
+	{
+		vway("wayToBathroom", "Go to {bathroom}.", 'hotelBathroom')
+	}
 }
 
-hotelBathroom = room 
+hotelBathroom = room
 {
 	nam = 'Hotel Bathroom',
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToCourtyard", "Go to {courtyard}.", 'courtyard')
+	},
 }
 
-courtyard = room 
+courtyard = room
 {
 	nam = 'Courtyard',
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToStreet", "Go to {street}.", 'street')
+	}
 }
 
-street = room 
+street = room
 {
 	nam = '63rd Street',
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToMrsVelmaODellHouse", "Go to {Mrs. Velma O'Dell house}.", 'mrsVelmaODellHouse')
+	}
 }
 
-mrsVelmaODellHouse = room 
+mrsVelmaODellHouse = room
 {
 	nam = "Mrs. Velma O'Dell house",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToSubway", "Go to {Subway}.", 'subway')
+	}
 }
 
-subway = room 
+subway = room
 {
 	nam = "Subway",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToSubwayFlashback", "Go to {Subway Flashback}.", 'subwayFlashback')
+	}
 }
 
-subwayFlashback = room 
+subwayFlashback = room
 {
 	nam = "Subway Flashback",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToManhassetStation", "Go to {Manhasset station}.", 'manhassetStation')
+	}
 }
 
-manhassetStation = room 
+manhassetStation = room
 {
 	nam = "Manhasset station",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToTaxi", "Go to {taxi}.", 'taxi')
+	}
 }
 
-taxi = room 
+taxi = room
 {
 	nam = "Taxi",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToCountryRoad", "Go to {country road}.", 'countryRoad')
+	}
 }
 
-countryRoad = room 
+countryRoad = room
 {
 	nam = "Country Road",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToConcreteHighway", "Go to {Concrete Highway}.", 'concreteHighway')
+	}
 }
 
-concreteHighway = room 
+concreteHighway = room
 {
 	nam = "Concrete Highway",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToJaniceMorrowCar", "Go to {Janice Morrow car}.", 'janiceMorrowCar')
+	}
 }
 
-janiceMorrowCar = room 
+janiceMorrowCar = room
 {
 	nam = "Janice Morrow car",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToInhabitantZone", "Go to {Inhabitant Zone}.", 'inhabitantZone')
+	}
 }
 
-inhabitantZone = room 
+inhabitantZone = room
 {
 	nam = "Inhabitant Zone",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToInhabitantZoneFlashback", "Go to {Inhabitant Zone Flashback}.", 'inhabitantZoneFlashback')
+	}
 }
 
-inhabitantZoneFlashback = room 
+inhabitantZoneFlashback = room
 {
 	nam = "Inhabitant Zone Flashback",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToChurch", "Go to {church}.", 'church')
+	}
 }
 
-church = room 
+church = room
 {
 	nam = "Church",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToGraveyard", "Go to {graveyard}.", 'graveyard')
+	}
 }
 
-graveyard = room 
+graveyard = room
 {
 	nam = "Graveyard",
-	dsc = [[]]
+	dsc = [[]],
+	obj =
+	{
+		vway("wayToOpenGrave", "Go to {open grave}.", 'openGrave')
+	}
 }
 
-openGrave = room 
+openGrave = room
 {
 	nam = "Open Grave",
 	dsc = [[]]
