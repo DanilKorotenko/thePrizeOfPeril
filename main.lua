@@ -15,13 +15,26 @@ main = room
 	obj =
 	{
 		vway("next", "Click {here} to play.", 'hotelRoom')
-	}
+	},
 };
+
+watch = obj
+{
+	nam = "Watch"
+}
 
 hotelRoom = room
 {
 	nam = 'Hotel Room',
 	dsc = [[]],
+	var { enterFirstly = true },
+	enter = function(s,f)
+		if s.enterFirstly == true then
+			inv():add('watch');
+			s.enterFirstly = false;
+			watch.inv = '8 hours left.'
+		end
+	end,
 	obj =
 	{
 		vway("wayToBathroom", "Go to {bathroom}.", 'hotelBathroom')
