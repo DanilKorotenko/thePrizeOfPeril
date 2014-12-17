@@ -21,20 +21,56 @@ main = room
 watch = obj
 {
 	nam = "Watch"
+	inv = function(s)
+--1. Hotel room					'You have nearly eight hours to go.'
+--1.1. Hotel bathroom
+--2. Hotel courtyard				'You have seven and a half hours to go.'
+--3. 63rd Street					'You have seven hours to go.'
+--4. Mrs. Velma O'Dell house			'You have six and a half hours to go.'
+--5. subway					'You have five hours to go.'
+--	5.1. flashback in subway
+--6. Manhasset station				'You have four and a half hours to go.'
+--7. taxi
+--8. country road					'You have four hours to go.'
+--9. concrete highway
+--10. Janice Morrow car				'You have three hours to go.'
+--11. inhabitant zone				'You have nearly two hours to go.'
+--	11.1. FLASHBACK in inhabitant zone
+--12. church					'You have one hour to go.'
+--13. graveyard					'You have few minutes to go.'
+--14. open grave
+
+		if here() == hotelRoom then --hotelBathroom
+			return 'You have nearly eight hours to go.';
+		elseif here() == courtyard then
+			return 'You have seven and a half hours to go.';
+		elseif here() == street then
+			return 'You have seven hours to go.';
+		elseif here() == mrsVelmaODellHouse then
+			return 'You have six and a half hours to go.'
+		elseif here() == subway then
+			return 'You have five hours to go.'
+		elseif here() == manhassetStation then --taxi
+			return 'You have four and a half hours to go.'
+		elseif here() == countryRoad then --concreteHighway
+			return 'You have four hours to go.'
+		elseif here() == janiceMorrowCar then
+			return 'You have three hours to go.'
+		elseif here() == inhabitantZone then
+			return 'You have nearly two hours to go.'
+		elseif here() == church then
+			return 'You have one hour to go.'
+		elseif here() == graveyard then --openGrave
+			return  'You have few minutes to go.'
+		end
+		return s.desc[state];
+	end,
 }
 
 hotelRoom = room
 {
 	nam = 'Hotel Room',
 	dsc = [[]],
-	var { enterFirstly = true },
-	enter = function(s,f)
-		if s.enterFirstly == true then
-			inv():add('watch');
-			s.enterFirstly = false;
-			watch.inv = '8 hours left.'
-		end
-	end,
 	obj =
 	{
 		vway("wayToBathroom", "Go to {bathroom}.", 'hotelBathroom')
