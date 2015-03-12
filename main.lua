@@ -51,6 +51,13 @@ watch = obj
 hotelRoom = room
 {
 	nam = 'Hotel Room',
+	var { enterFirstly = true },
+	enter = function(s,f)
+		if s.enterFirstly == true then
+			inv():add('watch');
+			s.enterFirstly = false;
+		end
+	end,
 	dsc = [[]],
 	obj =
 	{
