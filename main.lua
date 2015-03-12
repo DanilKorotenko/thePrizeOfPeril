@@ -20,7 +20,7 @@ main = room
 
 watch = obj
 {
-	nam = "Watch"
+	nam = "Watch",
 	inv = function(s)
 --1. Hotel room					'You have nearly eight hours to go.'
 --1.1. Hotel bathroom
