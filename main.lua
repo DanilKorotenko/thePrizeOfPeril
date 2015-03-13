@@ -304,62 +304,105 @@ A car was approaching from the other direction. Raeder ran into the highway, wav
 ]],
 	obj =
 	{
-		vway("wayToJaniceMorrowCar", "Go to {Janice Morrow car}.", 'janiceMorrowCar')
+		vway("wayToJaniceMorrowCar", "Go to {car}.", 'carDialog')
 	}
 }
 
-janiceMorrowCar = room
+carDialog = dlg
 {
 	nam = "Janice Morrow car",
-	dsc = [["Hurry!" cried the blond young woman driving it. Raeder dived in. The woman made a U-turn on the
-highway. A bullet smashed through the windshield. She stamped on the accelerator, almost running down the lone killer who stood in the way.
-The car surged away before the truck was within firing range.
+    hideinv = true;
+    entered = [["Hurry!" cried the blond young woman driving it.^^
+    
+        Raeder dived in.^^
+    
+        The woman made a U-turn on the highway. A bullet smashed through the windshield. She stamped on the accelerator, almost running down the lone killer who stood in the way.^^
+        
+        The car surged away before the truck was within firing range.^^
 
-Raeder leaned back and shut his eyes tightly. The woman concentrated on her driving, watching for the truck in her rear-vision mirror.
+        Raeder leaned back and shut his eyes tightly. The woman concentrated on her driving, watching for the truck in her rear-vision mirror.^^
 
-"It's happened again!" cried Mike Terry, his voice ecstatic. "Jim Raeder has been plucked again from the jaws of death, thanks to Good Samaritan Janice Morrow of four three three Lexington Avenue, New York City. Did you ever see anything like it, folks? The way Miss Morrow drove through a fusillade of bullets and plucked Jim Raeder from the mouth of doom! Later we'll interview Miss Morrow and get her reactions. Now, while Jim Raeder speeds away—perhaps to safety, perhaps to further peril—we'll have a short announcement from our sponsor. Don't go away! Jim's got four hours and ten minutes until he's safe: Anything can happen!"
+"It's happened again!" cried Mike Terry, his voice ecstatic.^^
+"Jim Raeder has been plucked again from the jaws of death, thanks to Good Samaritan Janice Morrow of four three three Lexington Avenue, New York City. Did you ever see anything like it, folks? The way Miss Morrow drove through a fusillade of bullets and plucked Jim Raeder from the mouth of doom! Later we'll interview Miss Morrow and get her reactions. Now, while Jim Raeder speeds away—perhaps to safety, perhaps to further peril—we'll have a short announcement from our sponsor. Don't go away! Jim's got four hours and ten minutes until he's safe: Anything can happen!"^^
 
- - "Okay," the girl said. "We're off the air now. Raeder, what in the hell is the matter with you?"
-
- - "Eh?" Raeder asked. The girl was in her early twenties. She looked efficient, attractive, untouchable. Raeder noticed that she had good features, a trim figure. And he noticed that she seemed angry.
-	"Miss," he said, "I don't know how to thank you for—" 
-
- - "Talk straight," Janice Morrow said. "I'm no Good Samaritan. I'm employed by the JBC network."
- - "So the program had me rescued!"
- - "Cleverly reasoned," she said.
- - "But why?"
- - "Look, this is an expensive show, Raeder. We have to turn in a good performance. If our rating slips, we'll all be in the street selling candy apples. 	And you aren't cooperating."
- - "What? Why?"
- - "Because you're terrible," the girl said bitterly. "You're
-	a flop, a fiasco. Are you trying to commit suicide? Haven't you learned anything about survival?"
- - "I'm doing the best I can."
- - "The Thompsons could have had you a dozen times by now. We told them to take it easy, stretch it out. But it's like shooting a clay pigeon six feet 
+ - "Okay," the girl said. "We're off the air now. Raeder, what in the hell is the matter with you?"]];
+ 
+    phr = 
+    {
+        {1, 
+            [[ - "Eh?" Raeder asked. The girl was in her early twenties. She looked efficient, attractive, untouchable. Raeder noticed that she had good features, a trim figure. And he noticed that she seemed angry.^^
+	"Miss," he said, "I don't know how to thank you for—"]],
+            [[ - "Talk straight," Janice Morrow said. "I'm no Good Samaritan. I'm employed by the JBC network."]], 
+            [[pon(2)]]
+        };
+        {2, false,
+            [[ - "So the program had me rescued!"]],
+            [[ - "Cleverly reasoned," she said.]],
+            [[pon(3)]]
+        };
+        {3, false,
+            [[ - "But why?"]],
+            [[- "Look, this is an expensive show, Raeder. We have to turn in a good performance. If our rating slips, we'll all be in the street selling candy apples. 	And you aren't cooperating."]],
+            [[pon(4)]]
+        };
+        {4, false,
+            [[- "What? Why?"]],
+            [[ - "Because you're terrible," the girl said bitterly. "You're
+	a flop, a fiasco. Are you trying to commit suicide? Haven't you learned anything about survival?"]],
+            [[pon(5)]]
+        };
+        {5, false,
+            [[- "I'm doing the best I can."]],
+            [[- "The Thompsons could have had you a dozen times by now. We told them to take it easy, stretch it out. But it's like shooting a clay pigeon six feet 
 	tall. The Thompsons are cooperating, but they can only fake so far. If I hadn't come along, they'd have had to kill you—air-time or not."
 	Raeder stared at her, wondering how such a pretty girl could talk that way. She glanced at him, then quickly looked back to the road.
-	"Don't give me that look!" she said. "You chose to risk your life for money, buster. And plenty of money! You knew the score. Don't act like some 	innocent little grocer who finds the nasty hoods are after him. That's a different plot."
- - "I know," Raeder said.
- - "If you can't live well, at least try to die well."
- - "You don't mean that," Raeder said.
- - "Don't be too sure ... You've got three hours and forty minutes until the end of the show. If you can stay alive, fine. The boodle's yours. But if you 	can't, at least try to give them a run for the money."
- - Raeder nodded, staring intently at her.
- - "In a few moments we're back on the air. I develop engine trouble, let you off. The Thompsons go all out now. They kill you when and if they can, as 	soon as they can. Understand?"
- - "Yes," Raeder said. "If I make it, can I see you some time?"
- - She bit her lip angrily. "Are you trying to kid me?"
- - "No. I'd like to see you again. May I?"
- - She looked at him curiously. "I don't know. Forget it. We're almost on. I think your best bet is the woods to the right. Ready?"
- - "Yes. Where can I get in touch with you? Afterward, I mean."
- - "Oh, Raeder, you aren't paying attention. Go through
-	the woods until you find a washed-out ravine. It isn't much, but it'll give you some cover."
- - "Where can I get in touch with you?" Raeder asked again.
- - "I'm in the Manhattan telephone book." She stopped the car. "Okay, Raeder, start running."
- - He opened the door.
- - "Wait" She leaned over and kissed him on the lips. "Good luck, you idiot. Call me if you make it."
-And then he was on foot, running into the woods.
-]],
-	obj =
-	{
-		vway("wayToInhabitantZone", "Go to {Inhabitant Zone}.", 'inhabitantZone')
-	}
+	"Don't give me that look!" she said. "You chose to risk your life for money, buster. And plenty of money! You knew the score. Don't act like some 	innocent little grocer who finds the nasty hoods are after him. That's a different plot."]],
+            [[pon(6)]]
+        };
+        {6, false,
+            [[ - "I know," Raeder said.]],
+            [[- "If you can't live well, at least try to die well."]],
+            [[pon(7)]]
+        };
+        {7, false,
+            [[ - "You don't mean that," Raeder said.]],
+            [[- "Don't be too sure ... You've got three hours and forty minutes until the end of the show. If you can stay alive, fine. The boodle's yours. But if you 	can't, at least try to give them a run for the money."]],
+            [[pon(8)]]
+        };
+        {8, false,
+            [[ - Raeder nodded, staring intently at her.]],
+            [[- "In a few moments we're back on the air. I develop engine trouble, let you off. The Thompsons go all out now. They kill you when and if they can, as 	soon as they can. Understand?"]],
+            [[pon(9)]]
+        };
+        {9, false,
+            [[- "Yes," Raeder said. "If I make it, can I see you some time?"]],
+            [[ - She bit her lip angrily. "Are you trying to kid me?"]],
+            [[pon(10)]]
+        };
+        {10, false,
+            [[- "No. I'd like to see you again. May I?"]],
+            [[- She looked at him curiously. "I don't know. Forget it. We're almost on. I think your best bet is the woods to the right. Ready?"]],
+            [[pon(11)]]
+        };
+        {11, false,
+            [[- "Yes. Where can I get in touch with you? Afterward, I mean."]],
+            [[- "Oh, Raeder, you aren't paying attention. Go through
+	the woods until you find a washed-out ravine. It isn't much, but it'll give you some cover."]],
+            [[pon(12)]]
+        };
+        {12, false,
+            [[- "Where can I get in touch with you?" Raeder asked again.]],
+            [[- "I'm in the Manhattan telephone book." She stopped the car. "Okay, Raeder, start running."]],
+            [[pon(13)]]
+        };
+        {
+            13, false,
+            [[- He opened the door.]],
+            [[ - "Wait" She leaned over and kissed him on the lips. "Good luck, you idiot. Call me if you make it."
+And then he was on foot, running into the woods.]],
+            [[walk(inhabitantZone)]]
+        };
+    }
 }
 
 inhabitantZone = room
