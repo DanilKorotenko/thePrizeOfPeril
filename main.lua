@@ -256,33 +256,26 @@ He stood up as soon as the doors opened, and glanced at his watch. He had five h
 ]],
 	obj =
 	{
-		vway("wayToManhassetStation", "Go to {Manhasset station}.", 'manhassetStation')
+		vway("wayToManhassetStation", "Go to {Manhasset station}.", 'taxidlg')
 	}
 }
 
-manhassetStation = room
+taxidlg = dlg
 {
-	nam = "Manhasset station",
-	dsc = [[AT the Manhasset station, he stepped into a taxi and told the driver to take him to New Salem.
-]],
-	obj =
-	{
-		vway("wayToTaxi", "Go to {taxi}.", 'taxi')
-	}
-}
-
-taxi = room
-{
-	nam = "Taxi",
-	dsc = [["New Salem?" the driver asked, looking at him in the rear-vision mirror.
-"That's right."
-The driver snapped on his radio. "Fare to New Salem. Yep, that's right. New Salem." They drove off. Raeder frowned, wondering if it had been a signal. It was perfectly usual for taxi drivers to report to their dispatchers, of course. But something about the man's voice .. .
-"Let me off here," Raeder said.
-]],
-	obj =
-	{
-		vway("wayToCountryRoad", "Go to {country road}.", 'countryRoad')
-	}
+    nam = 'In the Taxi';
+    hideinv = true;
+    entered = [[At the Manhasset station, you stepped into a taxi and told the driver to take you to New Salem.^^
+        "New Salem?" the driver asked, looking at you in the rear-vision mirror.]];
+    phr = 
+    {
+        { 1, [[That's right.]], 
+            [[The driver snapped on his radio.^^
+             - "Fare to New Salem. Yep, that's right. New Salem." They drove off.^^
+             You frowned, wondering if it had been a signal. It was perfectly usual for taxi drivers to report to their dispatchers, of course. But something about the man's voice ...]], 
+             code [[ pon(2) ]] 
+        };
+        { 2, false, always = true, [[Let me off here.]], [[- "No problem.", the driver reported.]],[[walk(countryRoad)]]}
+    }
 }
 
 countryRoad = room
