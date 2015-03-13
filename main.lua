@@ -8,6 +8,8 @@ game.act = 'Action is undefined.';
 game.inv = "Inventory is undefined";
 game.use = 'Use is undefined';
 
+game.forcedsc = true;
+
 main = room
 {
 	nam = 'The Prize of Peril',
