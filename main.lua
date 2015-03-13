@@ -58,37 +58,35 @@ hotelRoom = room
 			s.enterFirstly = false;
 		end
 	end,
-	dsc = [[RAEDER lifted his head cautiously above the windowsill. He saw the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As he watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. Raeder ducked down. A bullet smashed through the window above his head and punctured the ceiling, showering him with plaster.
-Now he knew about the alley. It was guarded, just like the door.
-He lay at full length on the cracked linoleum, staring at the bullet hole in the ceiling, listening to the sounds outside the door. He was a tall man with bloodshot eyes and a two-day stubble. Grime and fatigue had etched lines into his face. Fear had touched his features, tightening a muscle here and twitching a nerve there. The results were startling. His face had character now, for it was reshaped by the expectation of death.
-There was a gunman in the alley and two on the stairs. He was trapped. He was dead.
-Sure, Raeder thought, he still moved and breathed, but that was only because of death's inefficiency. Death would take care of him in a few minutes. Death would poke holes in his face and body, artistically dab his clothes with blood, arrange his limbs in some grotesque position of the graveyard ballet .. .
-Raeder bit his lip sharply. He wanted to live. There had to be a way.
-He rolled onto his stomach and surveyed the dingy cold-water apartment into which the killers had driven him. It was a perfect little one-room coffin. It had a door,
-which was watched, and a fire escape, which was watched. And it had a tiny windowless bathroom.
-He crawled to the bathroom and stood up. There was a ragged hole in the ceiling, almost four inches wide. If he could enlarge it, crawl through into the apartment above...
-He heard a muffled thud. The killers were impatient. They were beginning to break down the door.
-He studied the hole in the ceiling. No use even considering it. He could never enlarge it in time.
-They were smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets .. .
-
-But surely someone would help him! He took the tiny television set from his pocket. The picture was blurred, and he didn't bother to adjust it. The audio was clear and precise.
-
-He listened to the well-modulated voice of Mike Terry addressing his vast audience.
-.. terrible spot," Terry was saying. "Yes, folks, Jim Raeder is in a truly terrible predicament. He had been hiding, you'll remember, in a third-rate Broadway hotel under an assumed name. It seemed safe enough. But the bellhop recognized him, and gave that information to the Thompson gang."
-The door creaked under repeated blows. Raeder clutched the little television set and listened.
-"Jim Raeder just managed to escape from the hotel! Closely pursued, he entered a brownstone at one fifty-six West End Avenue. His intention was to go over the roofs. And it might have worked, folks, it just might have worked. But the roof door was locked. It looked like the end ... But Raeder found that apartment seven was unoccupied and unlocked. He entered ..."
-Terry paused for emphasis, then cried—"and now he's trapped there, trapped like a rat in a cage! The Thompson
-gang is breaking down the door! The fire escape is guarded! Our camera crew, situated in a nearby building, is giving you a close-up now. Look, folks, just look! Is there no hope for Jim Raeder?"
-Is there no hope? Raeder silently echoed, perspiration pouring from him as he stood in the dark, stifling little bathroom, listening to the steady thud against the door.
-"Wait a minute!" Mike Terry cried. "Hang on, Jim Raeder, hang on a little longer. Perhaps there is hope! I have an urgent call from one of our viewers, a call on the Good Samaritan Line! Here's someone who thinks he can help you, Jim. Are you listening, Jim Raeder?"
-Raeder waited, and heard the hinges tearing out of rotten wood.
-"Go right ahead, sir," said Mike Terry. "What is your name, sir?"
-"Er—Felix Bartholemow"
-"Don't be nervous, Mr. Bartholemow. Go right ahead"
-"Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—"
-Raeder pushed the television set into his pocket. He located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. He cleared the jagged sill and quickly peered down.
-Below was a long drop to a concrete courtyard.
-The hinges tore free. He heard the door opening.
+	dsc = [[RAEDER lifted his head cautiously above the windowsill. He saw the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As he watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. Raeder ducked down. A bullet smashed through the window above his head and punctured the ceiling, showering him with plaster.^^
+Now he knew about the alley. It was guarded, just like the door.^^
+He lay at full length on the cracked linoleum, staring at the bullet hole in the ceiling, listening to the sounds outside the door. He was a tall man with bloodshot eyes and a two-day stubble. Grime and fatigue had etched lines into his face. Fear had touched his features, tightening a muscle here and twitching a nerve there. The results were startling. His face had character now, for it was reshaped by the expectation of death.^^
+There was a gunman in the alley and two on the stairs. He was trapped. He was dead.^^
+Sure, Raeder thought, he still moved and breathed, but that was only because of death's inefficiency. Death would take care of him in a few minutes. Death would poke holes in his face and body, artistically dab his clothes with blood, arrange his limbs in some grotesque position of the graveyard ballet .. .^^
+Raeder bit his lip sharply. He wanted to live. There had to be a way.^^
+He rolled onto his stomach and surveyed the dingy cold-water apartment into which the killers had driven him. It was a perfect little one-room coffin. It had a door,which was watched, and a fire escape, which was watched. And it had a tiny windowless bathroom.^^
+He crawled to the bathroom and stood up. There was a ragged hole in the ceiling, almost four inches wide. If he could enlarge it, crawl through into the apartment above...^^
+He heard a muffled thud. The killers were impatient. They were beginning to break down the door.^^
+He studied the hole in the ceiling. No use even considering it. He could never enlarge it in time.^^
+They were smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets .. .^^
+^^
+But surely someone would help him! He took the tiny television set from his pocket. The picture was blurred, and he didn't bother to adjust it. The audio was clear and precise.^^
+^^
+He listened to the well-modulated voice of Mike Terry addressing his vast audience.^^
+.. terrible spot," Terry was saying. "Yes, folks, Jim Raeder is in a truly terrible predicament. He had been hiding, you'll remember, in a third-rate Broadway hotel under an assumed name. It seemed safe enough. But the bellhop recognized him, and gave that information to the Thompson gang."^^
+The door creaked under repeated blows. Raeder clutched the little television set and listened.^^
+"Jim Raeder just managed to escape from the hotel! Closely pursued, he entered a brownstone at one fifty-six West End Avenue. His intention was to go over the roofs. And it might have worked, folks, it just might have worked. But the roof door was locked. It looked like the end ... But Raeder found that apartment seven was unoccupied and unlocked. He entered ..."^^
+Terry paused for emphasis, then cried—"and now he's trapped there, trapped like a rat in a cage! The Thompson gang is breaking down the door! The fire escape is guarded! Our camera crew, situated in a nearby building, is giving you a close-up now. Look, folks, just look! Is there no hope for Jim Raeder?"^^
+Is there no hope? Raeder silently echoed, perspiration pouring from him as he stood in the dark, stifling little bathroom, listening to the steady thud against the door.^^
+"Wait a minute!" Mike Terry cried. "Hang on, Jim Raeder, hang on a little longer. Perhaps there is hope! I have an urgent call from one of our viewers, a call on the Good Samaritan Line! Here's someone who thinks he can help you, Jim. Are you listening, Jim Raeder?"^^
+Raeder waited, and heard the hinges tearing out of rotten wood.^^
+"Go right ahead, sir," said Mike Terry. "What is your name, sir?"^^
+"Er—Felix Bartholemow"^^
+"Don't be nervous, Mr. Bartholemow. Go right ahead"^^
+"Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—"^^
+Raeder pushed the television set into his pocket. He located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. He cleared the jagged sill and quickly peered down.^^
+Below was a long drop to a concrete courtyard.^^
+The hinges tore free. He heard the door opening.^^
 ]],
 	obj =
 	{
@@ -110,13 +108,12 @@ hotelBathroom = room
 courtyard = room
 {
 	nam = 'Courtyard',
-	dsc = [[Quickly Raeder climbed through the window, hung by his fingertips for a moment, and dropped.
-The shock was stunning. Groggily he stood up. A face appeared at the bathroom window.
-"Tough luck," said the man, leaning out and taking careful aim with a snub-nosed .38.
-At that moment a smoke bomb exploded inside the bathroom.
-The killer's shot went wide. He turned, cursing. More
-smoke bombs burst in the courtyard, obscuring Raeder's figure.
-He could hear Mike Terry's frenzied voice over the TV set in his pocket. "Now run for it!" Terry was screaming. "Run, Jim Raeder, run for your life. Run now, while the killers' eyes are filled with smoke. And thank Good Samaritan Sarah Winters, of three four one two Edgar Street, Brockton, Mass., for donating five smoke bombs and employing the services of a man to throw them!" In a quieter voice, Terry continued. "You've saved a man's life today, Mrs. Winters. Would you tell our audience how it—" Raeder wasn't able to hear any more. He was running through the smoke-filled courtyard, past clotheslines, into the open street.
+	dsc = [[Quickly Raeder climbed through the window, hung by his fingertips for a moment, and dropped.^^
+The shock was stunning. Groggily he stood up. A face appeared at the bathroom window.^^
+"Tough luck," said the man, leaning out and taking careful aim with a snub-nosed .38.^^
+At that moment a smoke bomb exploded inside the bathroom.^^
+The killer's shot went wide. He turned, cursing. More smoke bombs burst in the courtyard, obscuring Raeder's figure.^^
+He could hear Mike Terry's frenzied voice over the TV set in his pocket. "Now run for it!" Terry was screaming. "Run, Jim Raeder, run for your life. Run now, while the killers' eyes are filled with smoke. And thank Good Samaritan Sarah Winters, of three four one two Edgar Street, Brockton, Mass., for donating five smoke bombs and employing the services of a man to throw them!" In a quieter voice, Terry continued. "You've saved a man's life today, Mrs. Winters. Would you tell our audience how it—" Raeder wasn't able to hear any more. He was running through the smoke-filled courtyard, past clotheslines, into the open street.^^
 ]],
 	obj =
 	{
@@ -127,14 +124,14 @@ He could hear Mike Terry's frenzied voice over the TV set in his pocket. "Now ru
 street = room
 {
 	nam = '63rd Street',
-	dsc = [[HE walked down 63rd Street, slouching to minimize his height, staggering slightly from exertion, dizzy from lack of food and sleep.
-"Hey, you!"
-Raeder turned. A middle-aged woman was sitting on the steps of a brownstone, frowning at him.
-"You're Raeder, aren't you? The one they're trying to kill?"
-Raeder started to walk away.
-"Come inside here, Raeder," the woman said.
-Perhaps it was a trap. But Raeder knew that he had to depend upon the generosity and good-heartedness of the people. He was their representative, a projection of themselves, an average guy in trouble. Without them, he was lost. With them, nothing could harm him.
-Trust in the people, Mike Terry had told him. They'll never let you down.
+	dsc = [[HE walked down 63rd Street, slouching to minimize his height, staggering slightly from exertion, dizzy from lack of food and sleep.^^
+"Hey, you!"^^
+Raeder turned. A middle-aged woman was sitting on the steps of a brownstone, frowning at him.^^
+"You're Raeder, aren't you? The one they're trying to kill?"^^
+Raeder started to walk away.^^
+"Come inside here, Raeder," the woman said.^^
+Perhaps it was a trap. But Raeder knew that he had to depend upon the generosity and good-heartedness of the people. He was their representative, a projection of themselves, an average guy in trouble. Without them, he was lost. With them, nothing could harm him.^^
+Trust in the people, Mike Terry had told him. They'll never let you down.^^
 ]],
 	obj =
 	{
@@ -145,28 +142,28 @@ Trust in the people, Mike Terry had told him. They'll never let you down.
 mrsVelmaODellHouse = room
 {
 	nam = "Mrs. Velma O'Dell house",
-	dsc = [[He followed the woman into her parlor. She told him to sit down and left the room, returning almost immediately with a plate of stew. She stood watching him while he ate, as one would watch an ape in the zoo eat peanuts.
-Two children came out of the kitchen and stared at him.
-Three overalled men came out of the bedroom and focused a television camera on him. There was a big television set in the parlor. As he gulped his food, Raeder watched the image of Mike Terry and listened to the man's strong, sincere, worried voice.
-"There he is, folks," Terry was saying. "There's Jim Raeder now, eating his first square meal in two days. Our camera crews have really been working to cover this for you! Thanks, boys ... Folks, Jim Raeder has been given a brief sanctuary by Mrs. Velma O'Dell, of three forty-three Sixty-Third Street. Thank you, Good Samaritan O'Dell! It's really wonderful how people from all walks of life have taken Jim Raeder to their hearts!"
-"You better hurry," Mrs. O'Dell said.
-"Yes, ma'am," Raeder said.
-"I don't want no gunplay in my apartment."
-"I'm almost finished, ma'am."
-One of the children asked, `Aren't they going to kill him?"
-"Shut up," said Mrs. O'Dell.
-"Yes, Jim," chanted Mike Terry. "You'd better hurry. Your killers aren't far behind. They aren't stupid men, Jim. Vicious, warped insane yes! But not stupid. They're following a trail of blood—blood from your torn hand, Jim!"
-Raeder hadn't realized until now that he'd cut his hand on the windowsill.
-"Here, I'll bandage that," Mrs. O'Dell said. Raeder stood up and let her bandage his hand. Then she gave him a brown jacket and a gray slouch hat.
-"My husband's stuff," she said.
-"He has a disguise, folks!" Mike Terry cried delightedly. "This is something new! A disguise! With seven hours to go until he's safe!"
-"Now get out of here," Mrs. O'Dell said.
-"I'm going, ma'am," Raeder said. "Thanks."
-"I think you're stupid," she said. "I think you're stupid to be involved in this."
-"Yes, ma'am."
-"It just isn't worth it."
-Raeder thanked her and left. He walked to Broadway, caught a subway to 59th Street, then an uptown local to 86th. There he bought a newspaper and changed for the Manhasset through-express.
-He glanced at his watch. He had six and a half hours to go.
+	dsc = [[He followed the woman into her parlor. She told him to sit down and left the room, returning almost immediately with a plate of stew. She stood watching him while he ate, as one would watch an ape in the zoo eat peanuts.^^
+Two children came out of the kitchen and stared at him.^^
+Three overalled men came out of the bedroom and focused a television camera on him. There was a big television set in the parlor. As he gulped his food, Raeder watched the image of Mike Terry and listened to the man's strong, sincere, worried voice.^^
+"There he is, folks," Terry was saying. "There's Jim Raeder now, eating his first square meal in two days. Our camera crews have really been working to cover this for you! Thanks, boys ... Folks, Jim Raeder has been given a brief sanctuary by Mrs. Velma O'Dell, of three forty-three Sixty-Third Street. Thank you, Good Samaritan O'Dell! It's really wonderful how people from all walks of life have taken Jim Raeder to their hearts!"^^
+"You better hurry," Mrs. O'Dell said.^^
+"Yes, ma'am," Raeder said.^^
+"I don't want no gunplay in my apartment."^^
+"I'm almost finished, ma'am."^^
+One of the children asked, `Aren't they going to kill him?"^^
+"Shut up," said Mrs. O'Dell.^^
+"Yes, Jim," chanted Mike Terry. "You'd better hurry. Your killers aren't far behind. They aren't stupid men, Jim. Vicious, warped insane yes! But not stupid. They're following a trail of blood—blood from your torn hand, Jim!"^^
+Raeder hadn't realized until now that he'd cut his hand on the windowsill.^^
+"Here, I'll bandage that," Mrs. O'Dell said. Raeder stood up and let her bandage his hand. Then she gave him a brown jacket and a gray slouch hat.^^
+"My husband's stuff," she said.^^
+"He has a disguise, folks!" Mike Terry cried delightedly. "This is something new! A disguise! With seven hours to go until he's safe!"^^
+"Now get out of here," Mrs. O'Dell said.^^
+"I'm going, ma'am," Raeder said. "Thanks."^^
+"I think you're stupid," she said. "I think you're stupid to be involved in this."^^
+"Yes, ma'am."^^
+"It just isn't worth it."^^
+Raeder thanked her and left. He walked to Broadway, caught a subway to 59th Street, then an uptown local to 86th. There he bought a newspaper and changed for the Manhasset through-express.^^
+He glanced at his watch. He had six and a half hours to go.^^
 ]],
 	obj =
 	{
@@ -177,12 +174,12 @@ He glanced at his watch. He had six and a half hours to go.
 subway = room
 {
 	nam = "Subway",
-	dsc = [[THE subway roared under Manhattan. Raeder dozed, his bandaged hand concealed under the newspaper, the hat pulled over his face. Had he been recognized yet? Had he shaken the Thompson gang? Or was someone telephoning them now?
-Dreamily he wondered if he had escaped death, or was he still a cleverly animated corpse, moving around because of death's inefficiency? (My dear, death is so laggard these days! Jim Raeder walked about for hours after he died and actually answered people's questions before he could be decently buried!)
+	dsc = [[THE subway roared under Manhattan. Raeder dozed, his bandaged hand concealed under the newspaper, the hat pulled over his face. Had he been recognized yet? Had he shaken the Thompson gang? Or was someone telephoning them now?^^
+Dreamily he wondered if he had escaped death, or was he still a cleverly animated corpse, moving around because of death's inefficiency? (My dear, death is so laggard these days! Jim Raeder walked about for hours after he died and actually answered people's questions before he could be decently buried!)^^
 Raeder's eyes snapped open. He had dreamed something ... unpleasant. He couldn't remember what.
-
-
-He closed his eyes again and remembered, with mild astonishment, a time when he had been in no trouble.
+^^
+^^
+He closed his eyes again and remembered, with mild astonishment, a time when he had been in no trouble.^^
 ]],
 	obj =
 	{
@@ -193,28 +190,26 @@ He closed his eyes again and remembered, with mild astonishment, a time when he 
 subwayFlashback = room
 {
 	nam = "Subway Flashback",
-	dsc = [[That was two years ago. He had been a big, pleasant young man working as a truck driver's helper. He had no talents. He was too modest to have dreams.
-The tight-faced little truck driver had the dreams for him. "Why not try for a television show, Jim? I would if I had your looks. They like nice, average guys with nothing much on the ball. As contestants. Everybody likes guys like that. Why not look into it?"
-So he had looked into it. The owner of the local television store had explained it further.
-"You see, Jim, the public is sick of highly trained athletes with their trick reflexes and their professional courage. Who can feel for guys like that? Who can identify? People want to watch exciting things, sure, but not when some
-joker is making it his business for fifty thousand a year. That's why organized sports are in a slump. That's why the thrill shows are booming."
-"I see," said Raeder.
-"Six years ago, Jim, Congress passed the Voluntary Suicide Act. Those old senators talked a lot about free will and self-determinism at the time. But that's all crap. You know what the Act really means? It means the amateurs can risk their lives for the big loot, not just professionals. In the old days you had to be a professional boxer or footballer or hockey player if you wanted your brains beaten out legally for money. But now that opportunity is open to ordinary people like you, Jim."
-"I see," Raeder said again.
-"It's a marvelous opportunity. Take you. You're no better than anyone, Jim. Anything you can do, anyone can do. You're average. I think the thrill shows would go for you"
-Raeder permitted himself to dream. Television shows looked like a sure road to riches for a pleasant young fellow with no particular talent or training. He wrote a letter to a show called Hazard and enclosed a photograph of himself.
-Hazard was interested in him. The JBC network investigated, and found that he was average enough to satisfy the wariest viewer. His parentage and affiliations were checked. At last he was summoned to New York and interviewed by Mr. Moulain.
-Moulain was dark and intense, and chewed gum as he talked. "You'll do," he snapped. "But not for Hazard. You'll appear on Spills. It's a half-hour daytime show on Channel Three"
-"Gee," said Raeder.
-"Don't thank me. There's a thousand dollars if you win or place second, and a consolation prize of a hundred dollars if you lose. But that's not important."
-"No, sir."
-"Spills is a little show. The JBC network uses it as a testing ground. First and second-place winners on Spills move
-on to Emergency. The prizes are much bigger on Emergency."
-"I know they are, sir."
-"And if you do well on Emergency, there are the first-class thrill shows, like Hazard and Underwater Perils, with their nationwide coverage and enormous prizes. And then comes the really big time. How far you go is up to you."
-"I'll do my best, sir," Raeder said.
-Moulain stopped chewing gum for a moment and said, almost reverently, "You can do it, Jim. Just remember. You're the people, and the people can do anything."
-The way he said it made Raeder feel momentarily sorry for Mr. Moulain, who was dark and frizzy-haired and popeyed, and was obviously not the people.
+	dsc = [[That was two years ago. He had been a big, pleasant young man working as a truck driver's helper. He had no talents. He was too modest to have dreams.^^
+The tight-faced little truck driver had the dreams for him. "Why not try for a television show, Jim? I would if I had your looks. They like nice, average guys with nothing much on the ball. As contestants. Everybody likes guys like that. Why not look into it?"^^
+So he had looked into it. The owner of the local television store had explained it further.^^
+"You see, Jim, the public is sick of highly trained athletes with their trick reflexes and their professional courage. Who can feel for guys like that? Who can identify? People want to watch exciting things, sure, but not when some joker is making it his business for fifty thousand a year. That's why organized sports are in a slump. That's why the thrill shows are booming."^^
+"I see," said Raeder.^^
+"Six years ago, Jim, Congress passed the Voluntary Suicide Act. Those old senators talked a lot about free will and self-determinism at the time. But that's all crap. You know what the Act really means? It means the amateurs can risk their lives for the big loot, not just professionals. In the old days you had to be a professional boxer or footballer or hockey player if you wanted your brains beaten out legally for money. But now that opportunity is open to ordinary people like you, Jim."^^
+"I see," Raeder said again.^^
+"It's a marvelous opportunity. Take you. You're no better than anyone, Jim. Anything you can do, anyone can do. You're average. I think the thrill shows would go for you"^^
+Raeder permitted himself to dream. Television shows looked like a sure road to riches for a pleasant young fellow with no particular talent or training. He wrote a letter to a show called Hazard and enclosed a photograph of himself.^^
+Hazard was interested in him. The JBC network investigated, and found that he was average enough to satisfy the wariest viewer. His parentage and affiliations were checked. At last he was summoned to New York and interviewed by Mr. Moulain.^^
+Moulain was dark and intense, and chewed gum as he talked. "You'll do," he snapped. "But not for Hazard. You'll appear on Spills. It's a half-hour daytime show on Channel Three"^^
+"Gee," said Raeder.^^
+"Don't thank me. There's a thousand dollars if you win or place second, and a consolation prize of a hundred dollars if you lose. But that's not important."^^
+"No, sir."^^
+"Spills is a little show. The JBC network uses it as a testing ground. First and second-place winners on Spills move on to Emergency. The prizes are much bigger on Emergency."^^
+"I know they are, sir."^^
+"And if you do well on Emergency, there are the first-class thrill shows, like Hazard and Underwater Perils, with their nationwide coverage and enormous prizes. And then comes the really big time. How far you go is up to you."^^
+"I'll do my best, sir," Raeder said.^^
+Moulain stopped chewing gum for a moment and said, almost reverently, "You can do it, Jim. Just remember. You're the people, and the people can do anything."^^
+The way he said it made Raeder feel momentarily sorry for Mr. Moulain, who was dark and frizzy-haired and popeyed, and was obviously not the people.^^
 They shook hands. Then Raeder signed a paper absolving the JBC of all responsibility should he lose his life, limbs, or reason during the contest. And he signed another paper exercising his rights under the Voluntary Suicide Act. The law required this, and it was a mere formality.
 In three weeks, he appeared on Spills.
 The program followed the classic form of the automobile race. Untrained drivers climbed into powerful American and European competition cars and raced over a murderous twenty-mile course. Raeder was shaking with fear as he slid his big Maserati into the wrong gear and took off.
