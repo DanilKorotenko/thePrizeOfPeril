@@ -1,7 +1,8 @@
 -- $Name:The Prize of Peril$
 -- $Version:1.0.0$
 
-instead_version "1.3.0"
+instead_version "1.8.2"
+require "hideinv"
 
 game.act = 'Action is undefined.';
 game.inv = "Inventory is undefined";
