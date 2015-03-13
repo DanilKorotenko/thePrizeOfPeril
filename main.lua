@@ -4,15 +4,15 @@
 instead_version "1.8.2"
 require "hideinv"
 
-game.act = 'Action is undefined.';
+game.act = "Action is undefined.";
 game.inv = "Inventory is undefined";
-game.use = 'Use is undefined';
+game.use = "Use is undefined";
 
 game.forcedsc = true;
 
 main = room
 {
-	nam = 'The Prize of Peril',
+	nam = "The Prize of Peril",
 	dsc = "This game is based on Robert Shekley novell."..[[^^
 	Implementation: Danil Korotenko (danil.korotenko@gmail.com).]],
 	obj =
