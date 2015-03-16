@@ -23,10 +23,53 @@ main = room
 
 watch = obj
 {
-	nam = "Watch",
+	nam = "Look at the Watch",
 	inv = function(s)
 		if here() == hotelRoom then --hotelBathroom
 			return 'You have nearly eight hours to go.';
+		elseif here() == courtyard then
+			return 'You have seven and a half hours to go.';
+		elseif here() == street then
+			return 'You have seven hours to go.';
+		elseif here() == mrsVelmaODellHouse then
+			return 'You have six and a half hours to go.'
+		elseif here() == subway then
+			return 'You have five hours to go.'
+		elseif here() == manhassetStation then --taxi
+			return 'You have four and a half hours to go.'
+		elseif here() == countryRoad then --concreteHighway
+			return 'You have four hours to go.'
+		elseif here() == janiceMorrowCar then
+			return 'You have three hours to go.'
+		elseif here() == inhabitantZone then
+			return 'You have nearly two hours to go.'
+		elseif here() == church then
+			return 'You have one hour to go.'
+		elseif here() == graveyard then --openGrave
+			return  'You have few minutes to go.'
+		end
+	end,
+}
+
+TVSet = obj
+{
+	nam = "Listen to TV Set",
+	inv = function(s)
+		if here() == hotelBathroom then
+			return [[He took the tiny television set from his pocket. The picture was blurred, and he didn't bother to adjust it. The audio was clear and precise.^^
+^^
+He listened to the well-modulated voice of Mike Terry addressing his vast audience.^^
+.. terrible spot," Terry was saying. "Yes, folks, Jim Raeder is in a truly terrible predicament. He had been hiding, you'll remember, in a third-rate Broadway hotel under an assumed name. It seemed safe enough. But the bellhop recognized him, and gave that information to the Thompson gang."^^
+The door creaked under repeated blows. Raeder clutched the little television set and listened.^^
+"Jim Raeder just managed to escape from the hotel! Closely pursued, he entered a brownstone at one fifty-six West End Avenue. His intention was to go over the roofs. And it might have worked, folks, it just might have worked. But the roof door was locked. It looked like the end ... But Raeder found that apartment seven was unoccupied and unlocked. He entered ..."^^
+Terry paused for emphasis, then cried—"and now he's trapped there, trapped like a rat in a cage! The Thompson gang is breaking down the door! The fire escape is guarded! Our camera crew, situated in a nearby building, is giving you a close-up now. Look, folks, just look! Is there no hope for Jim Raeder?"^^
+Is there no hope? Raeder silently echoed, perspiration pouring from him as he stood in the dark, stifling little bathroom, listening to the steady thud against the door.^^
+"Wait a minute!" Mike Terry cried. "Hang on, Jim Raeder, hang on a little longer. Perhaps there is hope! I have an urgent call from one of our viewers, a call on the Good Samaritan Line! Here's someone who thinks he can help you, Jim. Are you listening, Jim Raeder?"^^
+Raeder waited, and heard the hinges tearing out of rotten wood.^^
+"Go right ahead, sir," said Mike Terry. "What is your name, sir?"^^
+"Er—Felix Bartholemow"^^
+"Don't be nervous, Mr. Bartholemow. Go right ahead"^^
+"Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—"]];
 		elseif here() == courtyard then
 			return 'You have seven and a half hours to go.';
 		elseif here() == street then
@@ -58,6 +101,7 @@ hotelRoom = room
 	enter = function(s,f)
 		if s.enterFirstly == true then
 			inv():add('watch');
+			inv():add('TVSet');
 			s.enterFirstly = false;
 		end
 	end,
@@ -72,24 +116,16 @@ He crawled to the bathroom and stood up. There was a ragged hole in the ceiling,
 He heard a muffled thud. The killers were impatient. They were beginning to break down the door.^^
 He studied the hole in the ceiling. No use even considering it. He could never enlarge it in time.^^
 They were smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets .. .^^
+
+But surely someone would help him! ^^
 ^^
-But surely someone would help him! He took the tiny television set from his pocket. The picture was blurred, and he didn't bother to adjust it. The audio was clear and precise.^^
-^^
-He listened to the well-modulated voice of Mike Terry addressing his vast audience.^^
-.. terrible spot," Terry was saying. "Yes, folks, Jim Raeder is in a truly terrible predicament. He had been hiding, you'll remember, in a third-rate Broadway hotel under an assumed name. It seemed safe enough. But the bellhop recognized him, and gave that information to the Thompson gang."^^
-The door creaked under repeated blows. Raeder clutched the little television set and listened.^^
-"Jim Raeder just managed to escape from the hotel! Closely pursued, he entered a brownstone at one fifty-six West End Avenue. His intention was to go over the roofs. And it might have worked, folks, it just might have worked. But the roof door was locked. It looked like the end ... But Raeder found that apartment seven was unoccupied and unlocked. He entered ..."^^
-Terry paused for emphasis, then cried—"and now he's trapped there, trapped like a rat in a cage! The Thompson gang is breaking down the door! The fire escape is guarded! Our camera crew, situated in a nearby building, is giving you a close-up now. Look, folks, just look! Is there no hope for Jim Raeder?"^^
-Is there no hope? Raeder silently echoed, perspiration pouring from him as he stood in the dark, stifling little bathroom, listening to the steady thud against the door.^^
-"Wait a minute!" Mike Terry cried. "Hang on, Jim Raeder, hang on a little longer. Perhaps there is hope! I have an urgent call from one of our viewers, a call on the Good Samaritan Line! Here's someone who thinks he can help you, Jim. Are you listening, Jim Raeder?"^^
-Raeder waited, and heard the hinges tearing out of rotten wood.^^
-"Go right ahead, sir," said Mike Terry. "What is your name, sir?"^^
-"Er—Felix Bartholemow"^^
-"Don't be nervous, Mr. Bartholemow. Go right ahead"^^
-"Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—"^^
+** Listen to TV Set **
+-----------------------
+
 Raeder pushed the television set into his pocket. He located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. He cleared the jagged sill and quickly peered down.^^
 Below was a long drop to a concrete courtyard.^^
 The hinges tore free. He heard the door opening.^^
+
 ]],
 	obj =
 	{
@@ -100,7 +136,7 @@ The hinges tore free. He heard the door opening.^^
 hotelBathroom = room
 {
 	nam = 'Hotel Bathroom',
-	dsc = [[]],
+	dsc = [[A tiny windowless bathroom.]],
 	obj =
 	{
 		vway("wayToHotelRoom", "Go to {hotel room}.", 'hotelRoom'),
