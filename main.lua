@@ -56,6 +56,7 @@ TVSet = obj
 	nam = "Listen to TV Set",
 	inv = function(s)
 		if here() == hotelBathroom then
+        
 			return [[He took the tiny television set from his pocket. The picture was blurred, and he didn't bother to adjust it. The audio was clear and precise.^^
 ^^
 He listened to the well-modulated voice of Mike Terry addressing his vast audience.^^
@@ -70,8 +71,11 @@ Raeder waited, and heard the hinges tearing out of rotten wood.^^
 "Er—Felix Bartholemow"^^
 "Don't be nervous, Mr. Bartholemow. Go right ahead"^^
 "Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—"]];
+
 		elseif here() == courtyard then
-			return 'You have seven and a half hours to go.';
+        
+			return [[He could hear Mike Terry's frenzied voice over the TV set in his pocket. "Now run for it!" Terry was screaming. "Run, Jim Raeder, run for your life. Run now, while the killers' eyes are filled with smoke. And thank Good Samaritan Sarah Winters, of three four one two Edgar Street, Brockton, Mass., for donating five smoke bombs and employing the services of a man to throw them!" In a quieter voice, Terry continued. "You've saved a man's life today, Mrs. Winters. Would you tell our audience how it—" Raeder wasn't able to hear any more. He was running through the smoke-filled courtyard, past clotheslines, into the open street.]];
+            
 		elseif here() == street then
 			return 'You have seven hours to go.';
 		elseif here() == mrsVelmaODellHouse then
@@ -94,6 +98,81 @@ Raeder waited, and heard the hinges tearing out of rotten wood.^^
 	end,
 }
 
+killedByWindowWatcher = room
+{
+	nam = 'Bad end',
+    dsc = [[The Window watcher killed the player.]];
+};
+
+windowsill = obj
+{
+    nam = 'Windowsill';
+	var { isLooked = false },
+    dsc = [[This room has a {window}.]];
+    act = function(s)
+--		if s.isLooked == false then
+--			s.isLooked = true;
+            return [[RAEDER lifted his head cautiously above the windowsill. He saw the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As he watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. Raeder ducked down. A bullet smashed through the window above his head and punctured the ceiling, showering him with plaster.^^
+Now he knew about the alley. It was guarded, just like the door.]];
+--		else
+--            return [[It would be better to not to look to the window the second time.]];
+--            walk(killedByWindowWatcher);
+--        end
+	end,
+};
+
+-- He lay at full length on the cracked linoleum, staring at the bullet hole in the ceiling, listening to the sounds outside the door. He was a tall man with bloodshot eyes and a two-day stubble. Grime and fatigue had etched lines into his face. Fear had touched his features, tightening a muscle here and twitching a nerve there. The results were startling. His face had character now, for it was reshaped by the expectation of death.^^
+
+-- There was a gunman in the alley and two on the stairs. He was trapped. He was dead.^^
+
+-- Sure, Raeder thought, he still moved and breathed, but that was only because of death's inefficiency. Death would take care of him in a few minutes. Death would poke holes in his face and body, artistically dab his clothes with blood, arrange his limbs in some grotesque position of the graveyard ballet .. .^^
+
+-- Raeder bit his lip sharply. He wanted to live. There had to be a way.^^
+
+--He rolled onto his stomach and surveyed the dingy cold-water apartment into which the killers had driven him. 
+
+--He crawled to the bathroom and stood up. There was a ragged hole in the ceiling, almost four inches wide. If he could enlarge it, crawl through into the apartment above...^^
+
+--He heard a muffled thud. The killers were impatient. They were beginning to break down the door.^^
+
+--He studied the hole in the ceiling. No use even considering it. He could never enlarge it in time.^^
+
+--They were smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets .. .^^
+
+--But surely someone would help him! ^^
+
+--** Listen to TV Set **
+-----------------------
+
+--Raeder pushed the television set into his pocket. He located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. He cleared the jagged sill and quickly peered down.^^
+
+--Below was a long drop to a concrete courtyard.^^
+
+--The hinges tore free. He heard the door opening.^^
+
+door = obj
+{
+    nam = 'Door';
+    dsc = [[This room has a {door}]];
+    act = [[The door is watched.]];
+};
+
+fireEscape = obj
+{
+    nam = 'Fire Escape';
+    dsc = [[This room has a {fire escape}]];
+    act = [[The fire escape is watched.]];
+};
+
+doorToBathroom = obj
+{
+    nam = 'Door to Bathroom';
+    dsc = [[This room has a {door to bathroom}]];
+    act = function(s)
+        walk(hotelBathroom);
+    end;
+};
+
 hotelRoom = room
 {
 	nam = 'Hotel Room',
@@ -105,31 +184,12 @@ hotelRoom = room
 			s.enterFirstly = false;
 		end
 	end,
-	dsc = [[RAEDER lifted his head cautiously above the windowsill. He saw the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As he watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. Raeder ducked down. A bullet smashed through the window above his head and punctured the ceiling, showering him with plaster.^^
-Now he knew about the alley. It was guarded, just like the door.^^
-He lay at full length on the cracked linoleum, staring at the bullet hole in the ceiling, listening to the sounds outside the door. He was a tall man with bloodshot eyes and a two-day stubble. Grime and fatigue had etched lines into his face. Fear had touched his features, tightening a muscle here and twitching a nerve there. The results were startling. His face had character now, for it was reshaped by the expectation of death.^^
-There was a gunman in the alley and two on the stairs. He was trapped. He was dead.^^
-Sure, Raeder thought, he still moved and breathed, but that was only because of death's inefficiency. Death would take care of him in a few minutes. Death would poke holes in his face and body, artistically dab his clothes with blood, arrange his limbs in some grotesque position of the graveyard ballet .. .^^
-Raeder bit his lip sharply. He wanted to live. There had to be a way.^^
-He rolled onto his stomach and surveyed the dingy cold-water apartment into which the killers had driven him. It was a perfect little one-room coffin. It had a door,which was watched, and a fire escape, which was watched. And it had a tiny windowless bathroom.^^
-He crawled to the bathroom and stood up. There was a ragged hole in the ceiling, almost four inches wide. If he could enlarge it, crawl through into the apartment above...^^
-He heard a muffled thud. The killers were impatient. They were beginning to break down the door.^^
-He studied the hole in the ceiling. No use even considering it. He could never enlarge it in time.^^
-They were smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets .. .^^
-
-But surely someone would help him! ^^
-^^
-** Listen to TV Set **
------------------------
-
-Raeder pushed the television set into his pocket. He located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. He cleared the jagged sill and quickly peered down.^^
-Below was a long drop to a concrete courtyard.^^
-The hinges tore free. He heard the door opening.^^
-
-]],
+	dsc = [[It was a perfect little one-room coffin.]],
 	obj =
 	{
-		vway("wayToBathroom", "Go to {bathroom}.", 'hotelBathroom')
+        windowsill,
+        door,
+        doorToBathroom
 	}
 }
 
@@ -148,15 +208,18 @@ courtyard = room
 {
 	nam = 'Courtyard',
 	dsc = [[Quickly Raeder climbed through the window, hung by his fingertips for a moment, and dropped.^^
+
 The shock was stunning. Groggily he stood up. A face appeared at the bathroom window.^^
+
 "Tough luck," said the man, leaning out and taking careful aim with a snub-nosed .38.^^
+
 At that moment a smoke bomb exploded inside the bathroom.^^
-The killer's shot went wide. He turned, cursing. More smoke bombs burst in the courtyard, obscuring Raeder's figure.^^
-He could hear Mike Terry's frenzied voice over the TV set in his pocket. "Now run for it!" Terry was screaming. "Run, Jim Raeder, run for your life. Run now, while the killers' eyes are filled with smoke. And thank Good Samaritan Sarah Winters, of three four one two Edgar Street, Brockton, Mass., for donating five smoke bombs and employing the services of a man to throw them!" In a quieter voice, Terry continued. "You've saved a man's life today, Mrs. Winters. Would you tell our audience how it—" Raeder wasn't able to hear any more. He was running through the smoke-filled courtyard, past clotheslines, into the open street.^^
-]],
+
+The killer's shot went wide. He turned, cursing. More smoke bombs burst in the courtyard, obscuring Raeder's figure.]],
+
 	obj =
 	{
-		vway("wayToStreet", "Go to {street}.", 'street')
+		vway("wayToStreet", "Run into {street}.", 'street')
 	}
 }
 
