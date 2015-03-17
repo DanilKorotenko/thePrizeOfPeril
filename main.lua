@@ -56,6 +56,8 @@ TVSet = obj
 	nam = "Listen to TV Set",
 	inv = function(s)
 		if here() == hotelBathroom then
+
+        	objs():add('windowOutlines');
         
 			return [[He took the tiny television set from his pocket. The picture was blurred, and he didn't bother to adjust it. The audio was clear and precise.^^
 ^^
@@ -73,7 +75,7 @@ Raeder waited, and heard the hinges tearing out of rotten wood.^^
 "Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—"]];
 
 		elseif here() == courtyard then
-        
+
 			return [[He could hear Mike Terry's frenzied voice over the TV set in his pocket. "Now run for it!" Terry was screaming. "Run, Jim Raeder, run for your life. Run now, while the killers' eyes are filled with smoke. And thank Good Samaritan Sarah Winters, of three four one two Edgar Street, Brockton, Mass., for donating five smoke bombs and employing the services of a man to throw them!" In a quieter voice, Terry continued. "You've saved a man's life today, Mrs. Winters. Would you tell our audience how it—" Raeder wasn't able to hear any more. He was running through the smoke-filled courtyard, past clotheslines, into the open street.]];
             
 		elseif here() == street then
@@ -98,27 +100,12 @@ Raeder waited, and heard the hinges tearing out of rotten wood.^^
 	end,
 }
 
-killedByWindowWatcher = room
-{
-	nam = 'Bad end',
-    dsc = [[The Window watcher killed the player.]];
-};
-
 windowsill = obj
 {
     nam = 'Windowsill';
-	var { isLooked = false },
     dsc = [[This room has a {window}.]];
-    act = function(s)
---		if s.isLooked == false then
---			s.isLooked = true;
-            return [[RAEDER lifted his head cautiously above the windowsill. He saw the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As he watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. Raeder ducked down. A bullet smashed through the window above his head and punctured the ceiling, showering him with plaster.^^
+    act = [[RAEDER lifted his head cautiously above the windowsill. He saw the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As he watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. Raeder ducked down. A bullet smashed through the window above his head and punctured the ceiling, showering him with plaster.^^
 Now he knew about the alley. It was guarded, just like the door.]];
---		else
---            return [[It would be better to not to look to the window the second time.]];
---            walk(killedByWindowWatcher);
---        end
-	end,
 };
 
 -- He lay at full length on the cracked linoleum, staring at the bullet hole in the ceiling, listening to the sounds outside the door. He was a tall man with bloodshot eyes and a two-day stubble. Grime and fatigue had etched lines into his face. Fear had touched his features, tightening a muscle here and twitching a nerve there. The results were startling. His face had character now, for it was reshaped by the expectation of death.^^
@@ -130,25 +117,6 @@ Now he knew about the alley. It was guarded, just like the door.]];
 -- Raeder bit his lip sharply. He wanted to live. There had to be a way.^^
 
 --He rolled onto his stomach and surveyed the dingy cold-water apartment into which the killers had driven him. 
-
---He crawled to the bathroom and stood up. There was a ragged hole in the ceiling, almost four inches wide. If he could enlarge it, crawl through into the apartment above...^^
-
---He heard a muffled thud. The killers were impatient. They were beginning to break down the door.^^
-
---He studied the hole in the ceiling. No use even considering it. He could never enlarge it in time.^^
-
---They were smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets .. .^^
-
---But surely someone would help him! ^^
-
---** Listen to TV Set **
------------------------
-
---Raeder pushed the television set into his pocket. He located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. He cleared the jagged sill and quickly peered down.^^
-
---Below was a long drop to a concrete courtyard.^^
-
---The hinges tore free. He heard the door opening.^^
 
 door = obj
 {
@@ -193,15 +161,49 @@ hotelRoom = room
 	}
 }
 
+--He heard a muffled thud. The killers were impatient. They were beginning to break down the door.^^
+
+--They were smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets .. .^^
+
+--But surely someone would help him! ^^
+
+--** Listen to TV Set **
+-----------------------
+
+--Raeder pushed the television set into his pocket. 
+
+holeOnTheCeiling = obj
+{
+    nam = 'Ragged hole';
+    dsc = [[There was a ragged {hole} in the ceiling, almost four inches wide. If he could enlarge it, crawl through into the apartment above...]];
+    act = [[He studied the hole in the ceiling. No use even considering it. He could never enlarge it in time.]];
+}
+
+windowOutlines = obj
+{
+    nam = 'Outlines of the window';
+    dsc = [[You can see tiny outlines of the {window}.]];
+    act = function(s)
+        p [[He located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. He cleared the jagged sill and quickly peered down.^^
+        Below was a long drop to a concrete courtyard.^^
+
+        The hinges tore free. He heard the door opening.^^]];
+        
+        walk(courtyard);
+        
+        return;
+    end;
+}
+
 hotelBathroom = room
 {
 	nam = 'Hotel Bathroom',
 	dsc = [[A tiny windowless bathroom.]],
-	obj =
-	{
-		vway("wayToHotelRoom", "Go to {hotel room}.", 'hotelRoom'),
-		vway("wayToCourtyard", "Go to {courtyard}.", 'courtyard')
-	},
+    enter = [[He crawled to the bathroom and stood up.]];
+    obj = 
+    {
+        holeOnTheCeiling
+    };
 }
 
 courtyard = room
@@ -351,8 +353,7 @@ subwayAgain = room
 {
 	nam = "Subway",
 	dsc = [[The subway came to a stop, jolting him out of his reverie. Raeder pushed back his hat and observed, across the aisle, a man staring at him and whispering to a stout woman. Had they recognized him?
-He stood up as soon as the doors opened, and glanced at his watch. He had five hours to go.
-]],
+He stood up as soon as the doors opened, and glanced at his watch. He had five hours to go.]],
 	obj =
 	{
 		vway("wayToManhassetStation", "Go to {Manhasset station}.", 'taxidlg')
@@ -380,15 +381,20 @@ taxidlg = dlg
 countryRoad = room
 {
 	nam = "Country Road",
-	dsc = [[He paid the driver and began walking down a narrow
-country road that curved through sparse woods. The trees were too small and too widely separated for shelter. Raeder walked on, looking for a place to hide.
-There was a heavy truck approaching. He kept on walking, pulling his hat low on his forehead. But as the truck drew near, he heard a voice from the television set in his pocket. It cried, "Watch out!"
-He flung himself into the ditch. The truck careened past, narrowly missing him, and screeched to a stop. The driver was shouting, "There he goes! Shoot, Harry, shoot!"
-Bullets clipped leaves from the trees as Raeder sprinted into the woods.
-"It's happened again!" Mike Terry was saying, his voice high-pitched with excitement. "I'm afraid Jim Raeder let himself be lulled into a false sense of security. You can't do that, Jim! Not with your life at stake! Not with killers pursuing you! Be careful, Jim, you still have four and a half hours to go!"
-The driver was saying, "Claude, Harry, go around with the truck. We got him boxed."
-"They've got you boxed, Jim Raeder!" Mike Terry cried. "But they haven't got you yet! And you can thank Good Samaritan Susy Peters of twelve Elm Street, South Orange, New Jersey, for that warning shout just when the truck was bearing down on you. We'll have little Susy on stage in just a moment ... Look, folks, our studio helicopter has arrived on the scene. Now you can see Jim Raeder running, and the killers pursuing, surrounding him ..."
-]],
+	dsc = [[He paid the driver and began walking down a narrow country road that curved through sparse woods. The trees were too small and too widely separated for shelter. Raeder walked on, looking for a place to hide. ^^
+    
+There was a heavy truck approaching. He kept on walking, pulling his hat low on his forehead. But as the truck drew near, he heard a voice from the television set in his pocket. It cried, "Watch out!"^^
+
+He flung himself into the ditch. The truck careened past, narrowly missing him, and screeched to a stop. The driver was shouting, "There he goes! Shoot, Harry, shoot!"^^
+
+Bullets clipped leaves from the trees as Raeder sprinted into the woods.^^
+
+"It's happened again!" Mike Terry was saying, his voice high-pitched with excitement. "I'm afraid Jim Raeder let himself be lulled into a false sense of security. You can't do that, Jim! Not with your life at stake! Not with killers pursuing you! Be careful, Jim, you still have four and a half hours to go!"^^
+
+The driver was saying, "Claude, Harry, go around with the truck. We got him boxed."^^
+
+"They've got you boxed, Jim Raeder!" Mike Terry cried. "But they haven't got you yet! And you can thank Good Samaritan Susy Peters of twelve Elm Street, South Orange, New Jersey, for that warning shout just when the truck was bearing down on you. We'll have little Susy on stage in just a moment ... Look, folks, our studio helicopter has arrived on the scene. Now you can see Jim Raeder running, and the killers pursuing, surrounding him ..."^^]],
+
 	obj =
 	{
 		vway("wayToConcreteHighway", "Go to {Concrete Highway}.", 'concreteHighway')
@@ -398,9 +404,8 @@ The driver was saying, "Claude, Harry, go around with the truck. We got him boxe
 concreteHighway = room
 {
 	nam = "Concrete Highway",
-	dsc = [[Raeder ran through a hundred yards of woods and found himself on a concrete highway, with open woods beyond. One of the killers was trotting through the woods behind him. The truck had driven to a connecting road and was now a mile away, coming toward him.
-A car was approaching from the other direction. Raeder ran into the highway, waving frantically. The car came to a stop.
-]],
+	dsc = [[Raeder ran through a hundred yards of woods and found himself on a concrete highway, with open woods beyond. One of the killers was trotting through the woods behind him. The truck had driven to a connecting road and was now a mile away, coming toward him.^^
+A car was approaching from the other direction. Raeder ran into the highway, waving frantically. The car came to a stop.]],
 	obj =
 	{
 		vway("wayToJaniceMorrowCar", "Go to {car}.", 'carDialog')
