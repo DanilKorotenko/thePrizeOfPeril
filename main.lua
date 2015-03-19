@@ -47,17 +47,11 @@ watch = obj
 	end,
 }
 
-TVSet = obj
+hotelBathroomTVSet = dlg
 {
 	nam = "Listen to TV Set",
-	inv = function(s)
-		if here() == hotelBathroom then
-
--- TODO: Listening TV SET in hotel bathroom like separate dialog with hiding inventory.
-
-        	objs():add('windowOutlines');
-        
-			return [[You took the tiny television set from your pocket. The picture was blurred, and you didn't bother to adjust it. The audio was clear and precise.^^
+    hideinv = true;
+    entered = [[You took the tiny television set from your pocket. The picture was blurred, and you didn't bother to adjust it. The audio was clear and precise.^^
 
 You listened to the well-modulated voice of Mike Terry addressing his vast audience.^^
 
@@ -71,7 +65,7 @@ The door creaked under repeated blows. You clutched the little television set an
 Terry paused for emphasis, then cried:^
 — "and now he's trapped there, trapped like a rat in a cage! The Thompson gang is breaking down the door! The fire escape is guarded! Our camera crew, situated in a nearby building, is giving you a close-up now. Look, folks, just look! Is there no hope for Jim Raeder?"^^
 
-Is there no hope? Raeder silently echoed, perspiration pouring from him as he stood in the dark, stifling little bathroom, listening to the steady thud against the door.^^
+Is there no hope? You silently echoed, perspiration pouring from you as you stood in the dark, stifling little bathroom, listening to the steady thud against the door.^^
 
 "Wait a minute!" Mike Terry cried. "Hang on, Jim Raeder, hang on a little longer. Perhaps there is hope! I have an urgent call from one of our viewers, a call on the Good Samaritan Line! Here's someone who thinks he can help you, Jim. Are you listening, Jim Raeder?"^^
 
@@ -83,10 +77,25 @@ You are waiting, and hearing the hinges tearing out of rotten wood.^^
 
 "Don't be nervous, Mr. Bartholemow. Go right ahead"^^
 
-"Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—"^^
+"Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—....."]];
+    phr = 
+    {
+        { 1, [[Push the television set into your pocket.]], 
+            [[You pushed the television set into your pocket.]], 
+            [[
+				objs(hotelBathroom):add('windowOutlines');
+				walk(hotelBathRoom);
+			]] 
+        };
+    }
+}
 
-Raeder pushed the television set into his pocket.]];
-
+TVSet = obj
+{
+	nam = "Listen to TV Set",
+	inv = function(s)
+		if here() == hotelBathroom then
+			walk(hotelBathroomTVSet);
 		elseif here() == courtyard then
 
 			return [[He could hear Mike Terry's frenzied voice over the TV set in his pocket. "Now run for it!" Terry was screaming. "Run, Jim Raeder, run for your life. Run now, while the killers' eyes are filled with smoke. And thank Good Samaritan Sarah Winters, of three four one two Edgar Street, Brockton, Mass., for donating five smoke bombs and employing the services of a man to throw them!" In a quieter voice, Terry continued. "You've saved a man's life today, Mrs. Winters. Would you tell our audience how it—" Raeder wasn't able to hear any more. He was running through the smoke-filled courtyard, past clotheslines, into the open street.]];
@@ -180,12 +189,6 @@ hotelRoom = room
 	}
 }
 
---He heard a muffled thud. The killers were impatient. They were beginning to break down the door.^^
-
---They were smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets .. .^^
-
---But surely someone would help him! ^^
-
 holeOnTheCeiling = obj
 {
     nam = 'Ragged hole';
@@ -213,7 +216,14 @@ windowOutlines = obj
 hotelBathroom = room
 {
 	nam = 'Hotel Bathroom',
-	dsc = [[A tiny windowless bathroom.]],
+	dsc = [[A tiny windowless bathroom.^^
+
+	You hear a muffled thud. The killers are impatient. They are beginning to break down the door.^^
+
+	They are smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets .. .^^
+
+	But surely someone would help you!]],
+
     enter = [[You crawled to the bathroom and stood up.]];
     obj = 
     {
@@ -309,7 +319,7 @@ Raeder hadn't realized until now that he'd cut his hand on the windowsill.^^
 		};
 		{3, false,
 			[["I'm going, ma'am," You said. "Thanks."]],
-			[["I think you're stupid," she said. "I think you're stupid to be involved in this."]],
+			[[- "I think you're stupid," she said. "I think you're stupid to be involved in this."]],
 			[[pon(4)]]
 		};
 		{4, false,
@@ -349,15 +359,15 @@ The tight-faced little truck driver had the dreams for him. "Why not try for a t
 
 So he had looked into it. The owner of the local television store had explained it further.^^
 
-"You see, Jim, the public is sick of highly trained athletes with their trick reflexes and their professional courage. Who can feel for guys like that? Who can identify? People want to watch exciting things, sure, but not when some joker is making it his business for fifty thousand a year. That's why organized sports are in a slump. That's why the thrill shows are booming."^^
+- "You see, Jim, the public is sick of highly trained athletes with their trick reflexes and their professional courage. Who can feel for guys like that? Who can identify? People want to watch exciting things, sure, but not when some joker is making it his business for fifty thousand a year. That's why organized sports are in a slump. That's why the thrill shows are booming."^^
 
-"I see," said Raeder.^^
+- "I see," said Raeder.^^
 
-"Six years ago, Jim, Congress passed the Voluntary Suicide Act. Those old senators talked a lot about free will and self-determinism at the time. But that's all crap. You know what the Act really means? It means the amateurs can risk their lives for the big loot, not just professionals. In the old days you had to be a professional boxer or footballer or hockey player if you wanted your brains beaten out legally for money. But now that opportunity is open to ordinary people like you, Jim."^^
+- "Six years ago, Jim, Congress passed the Voluntary Suicide Act. Those old senators talked a lot about free will and self-determinism at the time. But that's all crap. You know what the Act really means? It means the amateurs can risk their lives for the big loot, not just professionals. In the old days you had to be a professional boxer or footballer or hockey player if you wanted your brains beaten out legally for money. But now that opportunity is open to ordinary people like you, Jim."^^
 
-"I see," Raeder said again.^^
+- "I see," Raeder said again.^^
 
-"It's a marvelous opportunity. Take you. You're no better than anyone, Jim. Anything you can do, anyone can do. You're average. I think the thrill shows would go for you"^^
+- "It's a marvelous opportunity. Take you. You're no better than anyone, Jim. Anything you can do, anyone can do. You're average. I think the thrill shows would go for you"^^
 
 Raeder permitted himself to dream. Television shows looked like a sure road to riches for a pleasant young fellow with no particular talent or training. He wrote a letter to a show called Hazard and enclosed a photograph of himself.^^
 
@@ -365,19 +375,19 @@ Hazard was interested in him. The JBC network investigated, and found that he wa
 
 Moulain was dark and intense, and chewed gum as he talked. "You'll do," he snapped. "But not for Hazard. You'll appear on Spills. It's a half-hour daytime show on Channel Three"^^
 
-"Gee," said Raeder.^^
+- "Gee," said Raeder.^^
 
-"Don't thank me. There's a thousand dollars if you win or place second, and a consolation prize of a hundred dollars if you lose. But that's not important."^^
+- "Don't thank me. There's a thousand dollars if you win or place second, and a consolation prize of a hundred dollars if you lose. But that's not important."^^
 
-"No, sir."^^
+- "No, sir."^^
 
-"Spills is a little show. The JBC network uses it as a testing ground. First and second-place winners on Spills move on to Emergency. The prizes are much bigger on Emergency."^^
+- "Spills is a little show. The JBC network uses it as a testing ground. First and second-place winners on Spills move on to Emergency. The prizes are much bigger on Emergency."^^
 
-"I know they are, sir."^^
+- "I know they are, sir."^^
 
-"And if you do well on Emergency, there are the first-class thrill shows, like Hazard and Underwater Perils, with their nationwide coverage and enormous prizes. And then comes the really big time. How far you go is up to you."^^
+- "And if you do well on Emergency, there are the first-class thrill shows, like Hazard and Underwater Perils, with their nationwide coverage and enormous prizes. And then comes the really big time. How far you go is up to you."^^
 
-"I'll do my best, sir," Raeder said.^^
+- "I'll do my best, sir," Raeder said.^^
 
 Moulain stopped chewing gum for a moment and said, almost reverently, "You can do it, Jim. Just remember. You're the people, and the people can do anything."^^
 
@@ -425,9 +435,7 @@ So he appeared on Underwater Perils, sponsored by Fairlady's Soap. In face mask,
 
 Mask diving isn't especially hazardous. But the sponsor had added some frills for public interest. The area was sown with giant clams, moray eels, sharks of several species, giant octopuses, poison coral, and other dangers of the deep.^^
 
-It was a stirring contest. A man from Florida found the treasure in a deep crevice, but a moray eel found him. Another diver took the treasure, and a shark took him. The brilliant blue-green water became cloudy with blood, which photographed well on color TV. The treasure slipped to the bottom, and Raeder plunged after it, popping an eardrum in the process. He plucked it from the coral, jettisoned his^^
-
-weighted belt and made for the surface. Thirty feet from the top he had to fight another diver for the treasure.^^
+It was a stirring contest. A man from Florida found the treasure in a deep crevice, but a moray eel found him. Another diver took the treasure, and a shark took him. The brilliant blue-green water became cloudy with blood, which photographed well on color TV. The treasure slipped to the bottom, and Raeder plunged after it, popping an eardrum in the process. He plucked it from the coral, jettisoned hisweighted belt and made for the surface. Thirty feet from the top he had to fight another diver for the treasure.^^
 
 They feinted back and forth with their knives. The man struck, slashing Raeder across the chest. But Raeder, with the self-possession of an old contestant, dropped his knife and tore the man's respirator out of his mouth.^^
 
@@ -502,6 +510,7 @@ concreteHighway = room
 {
 	nam = "Concrete Highway",
 	dsc = [[Raeder ran through a hundred yards of woods and found himself on a concrete highway, with open woods beyond. One of the killers was trotting through the woods behind him. The truck had driven to a connecting road and was now a mile away, coming toward him.^^
+
 A car was approaching from the other direction. Raeder ran into the highway, waving frantically. The car came to a stop.]],
 
 	obj =
@@ -524,88 +533,98 @@ carDialog = dlg
 
         Raeder leaned back and shut his eyes tightly. The woman concentrated on her driving, watching for the truck in her rear-vision mirror.^^
 
-"It's happened again!" cried Mike Terry, his voice ecstatic.^^
+		"It's happened again!" cried Mike Terry, his voice ecstatic.^^
 
-"Jim Raeder has been plucked again from the jaws of death, thanks to Good Samaritan Janice Morrow of four three three Lexington Avenue, New York City. Did you ever see anything like it, folks? The way Miss Morrow drove through a fusillade of bullets and plucked Jim Raeder from the mouth of doom! Later we'll interview Miss Morrow and get her reactions. Now, while Jim Raeder speeds away—perhaps to safety, perhaps to further peril—we'll have a short announcement from our sponsor. Don't go away! Jim's got four hours and ten minutes until he's safe: Anything can happen!"^^
+		"Jim Raeder has been plucked again from the jaws of death, thanks to Good Samaritan Janice Morrow of four three three Lexington Avenue, New York City. Did you ever see anything like it, folks? The way Miss Morrow drove through a fusillade of bullets and plucked Jim Raeder from the mouth of doom! Later we'll interview Miss Morrow and get her reactions. Now, while Jim Raeder speeds away—perhaps to safety, perhaps to further peril—we'll have a short announcement from our sponsor. Don't go away! Jim's got four hours and ten minutes until he's safe: Anything can happen!"^^
 
- - "Okay," the girl said. "We're off the air now. Raeder, what in the hell is the matter with you?"]];
+		- "Okay," the girl said. "We're off the air now. Raeder, what in the hell is the matter with you?"]];
  
     phr = 
     {
         {1, 
-            [[ - "Eh?" Raeder asked. The girl was in her early twenties. She looked efficient, attractive, untouchable. Raeder noticed that she had good features, a trim figure. And he noticed that she seemed angry.^^
+            [["Eh?" Raeder asked. The girl was in her early twenties. She looked efficient, attractive, untouchable. Raeder noticed that she had good features, a trim figure. And he noticed that she seemed angry.^^
 
-	"Miss," he said, "I don't know how to thank you for—"]],
+		- "Miss," he said, "I don't know how to thank you for—"]],
+
             [[ - "Talk straight," Janice Morrow said. "I'm no Good Samaritan. I'm employed by the JBC network."]], 
+
             [[pon(2)]]
         };
         {2, false,
-            [[ - "So the program had me rescued!"]],
+            [["So the program had me rescued!"]],
             [[ - "Cleverly reasoned," she said.]],
             [[pon(3)]]
         };
         {3, false,
-            [[ - "But why?"]],
+            [["But why?"]],
             [[- "Look, this is an expensive show, Raeder. We have to turn in a good performance. If our rating slips, we'll all be in the street selling candy apples. 	And you aren't cooperating."]],
             [[pon(4)]]
         };
         {4, false,
-            [[- "What? Why?"]],
-            [[ - "Because you're terrible," the girl said bitterly. "You're
-	a flop, a fiasco. Are you trying to commit suicide? Haven't you learned anything about survival?"]],
+            [["What? Why?"]],
+
+            [[ - "Because you're terrible," the girl said bitterly.^
+			- "You're a flop, a fiasco. Are you trying to commit suicide? Haven't you learned anything about survival?"]],
+
             [[pon(5)]]
         };
         {5, false,
-            [[- "I'm doing the best I can."]],
+            [["I'm doing the best I can."]],
             [[- "The Thompsons could have had you a dozen times by now. We told them to take it easy, stretch it out. But it's like shooting a clay pigeon six feet tall. The Thompsons are cooperating, but they can only fake so far. If I hadn't come along, they'd have had to kill you—air-time or not."^^
 
 	Raeder stared at her, wondering how such a pretty girl could talk that way. She glanced at him, then quickly looked back to the road.^^
 
 	"Don't give me that look!" she said. "You chose to risk your life for money, buster. And plenty of money! You knew the score. Don't act like some 	innocent little grocer who finds the nasty hoods are after him. That's a different plot."]],
+
             [[pon(6)]]
         };
         {6, false,
-            [[ - "I know," Raeder said.]],
+            [["I know," Raeder said.]],
             [[- "If you can't live well, at least try to die well."]],
             [[pon(7)]]
         };
         {7, false,
-            [[ - "You don't mean that," Raeder said.]],
+            [["You don't mean that," Raeder said.]],
+
             [[- "Don't be too sure ... You've got three hours and forty minutes until the end of the show. If you can stay alive, fine. The boodle's yours. But if you 	can't, at least try to give them a run for the money."]],
             [[pon(8)]]
         };
         {8, false,
-            [[ - Raeder nodded, staring intently at her.]],
+            [[Raeder nodded, staring intently at her.]],
             [[- "In a few moments we're back on the air. I develop engine trouble, let you off. The Thompsons go all out now. They kill you when and if they can, as 	soon as they can. Understand?"]],
+
             [[pon(9)]]
         };
         {9, false,
-            [[- "Yes," Raeder said. "If I make it, can I see you some time?"]],
-            [[ - She bit her lip angrily. "Are you trying to kid me?"]],
+            [["Yes," Raeder said. "If I make it, can I see you some time?"]],
+            [[- She bit her lip angrily. "Are you trying to kid me?"]],
             [[pon(10)]]
         };
         {10, false,
-            [[- "No. I'd like to see you again. May I?"]],
+            [["No. I'd like to see you again. May I?"]],
+
             [[- She looked at him curiously. "I don't know. Forget it. We're almost on. I think your best bet is the woods to the right. Ready?"]],
             [[pon(11)]]
         };
         {11, false,
-            [[- "Yes. Where can I get in touch with you? Afterward, I mean."]],
-            [[- "Oh, Raeder, you aren't paying attention. Go through
-	the woods until you find a washed-out ravine. It isn't much, but it'll give you some cover."]],
+            [["Yes. Where can I get in touch with you? Afterward, I mean."]],
+            [[- "Oh, Raeder, you aren't paying attention. Go through the woods until you find a washed-out ravine. It isn't much, but it'll give you some cover."]],
+
             [[pon(12)]]
         };
         {12, false,
-            [[- "Where can I get in touch with you?" Raeder asked again.]],
+            [["Where can I get in touch with you?" Raeder asked again.]],
             [[- "I'm in the Manhattan telephone book." She stopped the car. "Okay, Raeder, start running."]],
+
             [[pon(13)]]
         };
         {
             13, false,
-            [[- He opened the door.]],
-            [[ - "Wait" She leaned over and kissed him on the lips. "Good luck, you idiot. Call me if you make it."^^
+            [[He opened the door.]],
+            [[- "Wait" She leaned over and kissed him on the lips. "Good luck, you idiot. Call me if you make it."^^
 
-And then he was on foot, running into the woods.]],
+			And then he was on foot, running into the woods.]],
+
             [[walk(inhabitantZone)]]
         };
     }
@@ -616,25 +635,24 @@ inhabitantZone = room
 	nam = "Inhabitant Zone",
 	dsc = [[HE ran through birch and pine, past an occasional split-level house with staring faces at the big picture windows. Some occupant of those houses must have called the gang, for they were close behind him when he reached the washed-out little ravine. Those quiet, mannerly, law-abiding people didn't want him to escape, Raeder thought sadly. They wanted to see a killing. Or perhaps they wanted to see him narrowly escape a killing.^^
 
-It came to the same thing, really.^^
+		It came to the same thing, really.^^
 
-He entered the ravine, burrowed into the thick underbrush and lay still. The Thompsons appeared on both ridges, moving slowly, watching for any movement. Raeder held his breath as they came parallel to him.^^
+		He entered the ravine, burrowed into the thick underbrush and lay still. The Thompsons appeared on both ridges, moving slowly, watching for any movement. Raeder held his breath as they came parallel to him.^^
 
-He heard the quick explosion of a revolver. But the killer had only shot a squirrel. It squirmed for a moment, then lay still.^^
+		He heard the quick explosion of a revolver. But the killer had only shot a squirrel. It squirmed for a moment, then lay still.^^
 
-Lying in the underbrush, Raeder heard the studio helicopter overhead. He wondered if any cameras were focused on him. It was possible. And if someone were watching, perhaps some Good Samaritan would help.^^
+		Lying in the underbrush, Raeder heard the studio helicopter overhead. He wondered if any cameras were focused on him. It was possible. And if someone were watching, perhaps some Good Samaritan would help.^^
 
-So looking upward, toward the helicopter, Raeder arranged his face in a reverent expression, clasped his hands and prayed. He prayed silently, for the audience didn't like religious ostentation. But his lips moved. That was every man's privilege.^^
+		So looking upward, toward the helicopter, Raeder arranged his face in a reverent expression, clasped his hands and prayed. He prayed silently, for the audience didn't like religious ostentation. But his lips moved. That was every man's privilege.^^
 
-And a real prayer was on his lips. Once, a lipreader in^^
+		And a real prayer was on his lips. Once, a lipreader in the audience had detected a fugitive pretending to pray, but actually just reciting multiplication tables. No help for that man!^^
 
-the audience had detected a fugitive pretending to pray, but actually just reciting multiplication tables. No help for that man!^^
+		Raeder finished his prayer. Glancing at his watch, he saw that he had nearly two hours to go.^^
 
-Raeder finished his prayer. Glancing at his watch, he saw that he had nearly two hours to go.^^
+		And he didn't want to die. It wasn't worth it, no matter how much they paid! He must have been crazy, absolutely insane to agree to such a thing ...^^
 
-And he didn't want to die. It wasn't worth it, no matter how much they paid! He must have been crazy, absolutely insane to agree to such a thing ...^^
+		But he knew that wasn't true. And he remembered just how sane he had been.]],
 
-But he knew that wasn't true. And he remembered just how sane he had been.]],
 	obj =
 	{
 		vway("wayToInhabitantZoneFlashback", "Go to {Inhabitant Zone Flashback}.", 'inhabitantZoneFlashback')
@@ -646,49 +664,50 @@ inhabitantZoneFlashback = room
 	nam = "Inhabitant Zone Flashback",
 	dsc = [[ONE week ago, he had been on The Prize of Peril stage, blinking in the spotlight, and Mike Terry had shaken his hand.^^
 
-"Now, Mr. Raeder," Terry had said solemnly, "do you understand the rules of the game you are about to play?" Raeder nodded.^^
+		- "Now, Mr. Raeder," Terry had said solemnly, "do you understand the rules of the game you are about to play?" Raeder nodded.^^
 
-"If you accept, Jim Raeder, you will be a hunted man for a week. Killers will follow you, Jim. Trained killers, men wanted by the law for other crimes, granted immunity for this single killing under the Voluntary Suicide Act. They will be trying to kill you, Jim. Do you understand?"^^
+		- "If you accept, Jim Raeder, you will be a hunted man for a week. Killers will follow you, Jim. Trained killers, men wanted by the law for other crimes, granted immunity for this single killing under the Voluntary Suicide Act. They will be trying to kill you, Jim. Do you understand?"^^
 
-"I understand," Raeder said. He also understood the two hundred thousand dollars he would receive if he could live out the week.^^
+		- "I understand," Raeder said. He also understood the two hundred thousand dollars he would receive if he could live out the week.^^
 
-"I ask you again, Jim Raeder. We force no man to play for stakes of death."^^
+		- "I ask you again, Jim Raeder. We force no man to play for stakes of death."^^
 
-"I want to play," Raeder said.^^
+		- "I want to play," Raeder said.^^
 
-Mike Terry turned to the audience. "Ladies and gentlemen, I have here a copy of an exhaustive psychological test which an impartial psychological testing firm made on Jim Raeder at our request. Copies will be sent to anyone who desires them for twenty-five cents to cover the cost of mailing. The test shows that Jim Raeder is sane, well-balanced and fully responsible in every way." He turned to Raeder.^^
+		Mike Terry turned to the audience. "Ladies and gentlemen, I have here a copy of an exhaustive psychological test which an impartial psychological testing firm made on Jim Raeder at our request. Copies will be sent to anyone who desires them for twenty-five cents to cover the cost of mailing. The test shows that Jim Raeder is sane, well-balanced and fully responsible in every way." He turned to Raeder.^^
 
-"Do you still want to enter the contest, Jim?"^^
+		- "Do you still want to enter the contest, Jim?"^^
 
-"Yes, I do."^^
+		- "Yes, I do."^^
 
-"Very well!" cried Mike Terry. "Jim Raeder, meet your would-be killers!"^^
+		- "Very well!" cried Mike Terry. "Jim Raeder, meet your would-be killers!"^^
 
-The Thompson gang moved onstage, booed by the audience.^^
+		The Thompson gang moved onstage, booed by the audience.^^
 
-"Look at them, folks," said Mike Terry, with undisguised contempt. "Just look at them! Antisocial, thoroughly vicious, completely amoral. These men have no code but the criminal's warped code, no honor but the honor of the cowardly hired killer. They are doomed men, doomed by our society, which will not sanction their activities for long, fated to an early and unglamorous death."^^
+		- "Look at them, folks," said Mike Terry, with undisguised contempt. "Just look at them! Antisocial, thoroughly vicious, completely amoral. These men have no code but the criminal's warped code, no honor but the honor of the cowardly hired killer. They are doomed men, doomed by our society, which will not sanction their activities for long, fated to an early and unglamorous death."^^
 
-The audience shouted enthusiastically.^^
+		The audience shouted enthusiastically.^^
 
-"What have you to say, Claude Thompson?" Terry asked.^^
+		- "What have you to say, Claude Thompson?" Terry asked.^^
 
-Claude, the spokesman of the Thompsons, stepped up to the microphone. He was a thin, clean-shaved man, conservatively dressed.^^
+		Claude, the spokesman of the Thompsons, stepped up to the microphone. He was a thin, clean-shaved man, conservatively dressed.^^
 
-"I figure," Claude Thompson said hoarsely, "I figure we're no worse than anybody. I mean, like soldiers in a war: They kill. And look at the graft in government, and the unions. Everybody's got their graft."^^
+		- "I figure," Claude Thompson said hoarsely, "I figure we're no worse than anybody. I mean, like soldiers in a war: They kill. And look at the graft in government, and the unions. Everybody's got their graft."^^
 
-That was Thompson's tenuous code. But how quickly, with what precision, Mike Terry destroyed the killer's rationalizations! Terry's questions pierced straight to the filthy soul of the man.^^
+		That was Thompson's tenuous code. But how quickly, with what precision, Mike Terry destroyed the killer's rationalizations! Terry's questions pierced straight to the filthy soul of the man.^^
 
-At the end of the interview, Claude Thompson was perspiring, mopping his face with a silk handkerchief and casting quick glances at his men.^^
+		At the end of the interview, Claude Thompson was perspiring, mopping his face with a silk handkerchief and casting quick glances at his men.^^
 
-Mike Terry put a hand on Raeder's shoulder. "Here is the man who has agreed to become your victim—if you can catch him."^^
+		Mike Terry put a hand on Raeder's shoulder. "Here is the man who has agreed to become your victim—if you can catch him."^^
 
-"We'll catch him," Thompson said, his confidence returning.^^
+		- "We'll catch him," Thompson said, his confidence returning.^^
 
-"Don't be too sure," said Terry. "Jim Raeder has fought wild bulls—now he battles jackals. He's an average man. He's the people—who mean ultimate doom to you and your kind."^^
+		- "Don't be too sure," said Terry. "Jim Raeder has fought wild bulls—now he battles jackals. He's an average man. He's the people—who mean ultimate doom to you and your kind."^^
 
-"We'll get him," Thompson said.^^
+		- "We'll get him," Thompson said.^^
 
-"And one thing more," Terry said, very softly. "Jim Raeder does not stand alone. The folks of America are for him. Good Samaritans from all corners of our great nation stand ready to assist him. Unarmed, defenseless, Jim Raeder can count on the aid and goodheartedness of the people, whose representative he is. So don't be too sure, Claude Thompson! The average men are for Jim Raeder—and there are a lot of average men!"]],
+		- "And one thing more," Terry said, very softly. "Jim Raeder does not stand alone. The folks of America are for him. Good Samaritans from all corners of our great nation stand ready to assist him. Unarmed, defenseless, Jim Raeder can count on the aid and goodheartedness of the people, whose representative he is. So don't be too sure, Claude Thompson! The average men are for Jim Raeder—and there are a lot of average men!"]],
+
 	obj =
 	{
 		vway("wayToInhabitantZoneAgain", "Go to {Inhabitant Zone}.", 'inhabitantZoneAgain')
@@ -700,56 +719,57 @@ inhabitantZoneAgain = room
 	nam = "Inhabitant Zone",
 	dsc = [[RAEDER thought about it, lying motionless in the underbrush. Yes, the people had helped him. But they had helped the killers, too.^^
 
-A tremor ran through him. He had chosen, he reminded himself. He alone was responsible. The psychological test had proved that.^^
+		A tremor ran through him. He had chosen, he reminded himself. He alone was responsible. The psychological test had proved that.^^
 
-And yet, how responsible were the psychologists who had given him the test? How responsible was Mike Terry for offering a poor man so much money? Society had woven the noose and put it around his neck, and he was hanging himself with it and calling it free will.^^
+		And yet, how responsible were the psychologists who had given him the test? How responsible was Mike Terry for offering a poor man so much money? Society had woven the noose and put it around his neck, and he was hanging himself with it and calling it free will.^^
 
-Whose fault?^^
+		Whose fault?^^
 
-"Aha!" someone cried.^^
+		- "Aha!" someone cried.^^
 
-Raeder looked up and saw a portly man standing near him.^^
+		Raeder looked up and saw a portly man standing near him.^^
 
-The man wore a loud tweed jacket. He had binoculars around his neck and a cane in his hand.^^
+		The man wore a loud tweed jacket. He had binoculars around his neck and a cane in his hand.^^
 
-"Mister," Raeder whispered, "please don't tell!"^^
+		- "Mister," Raeder whispered, "please don't tell!"^^
 
-"Hi!" shouted the portly man, pointing at Raeder with his cane. "Here he is!"^^
+		- "Hi!" shouted the portly man, pointing at Raeder with his cane. "Here he is!"^^
 
-A madman, thought Raeder. The damned fool must think he's playing Hare and Hounds.^^
+		A madman, thought Raeder. The damned fool must think he's playing Hare and Hounds.^^
 
-"Right over here!" the man screamed.^^
+		- "Right over here!" the man screamed.^^
 
-Cursing, Raeder sprang to his feet and began running. He carne out of the ravine and saw a white building in the distance. He turned toward it. Behind him he could still hear the man.^^
+		Cursing, Raeder sprang to his feet and began running. He carne out of the ravine and saw a white building in the distance. He turned toward it. Behind him he could still hear the man.^^
 
-"That way, over there. Look, you fools, can't you see him yet?"^^
+		- "That way, over there. Look, you fools, can't you see him yet?"^^
 
-The killers were shooting again. Raeder ran, stumbling over uneven ground, past three children playing in a tree house.^^
+		The killers were shooting again. Raeder ran, stumbling over uneven ground, past three children playing in a tree house.^^
 
-"Here he is!" the children screamed. "Here he is!" Raeder groaned and ran on. ]],
+		- "Here he is!" the children screamed. "Here he is!" Raeder groaned and ran on. ]],
+
 	obj =
 	{
 		vway("wayToChurch", "Go to {church}.", 'church')
 	}
 }
 
-
 church = room
 {
 	nam = "Church",
 	dsc = [[He reached the steps of the building and saw that it was a church.^^
 
-As he opened the door, a bullet struck him behind the right kneecap.^^
+		As he opened the door, a bullet struck him behind the right kneecap.^^
 
-He fell, and crawled inside the church.^^
+		He fell, and crawled inside the church.^^
 
-The television set in his pocket was saying, "What a finish, folks, what a finish! Raeder's been hit! He's been hit, folks, he's crawling now, he's in pain, but he hasn't given up! NOT Jim Raeder!"^^
+		The television set in his pocket was saying, "What a finish, folks, what a finish! Raeder's been hit! He's been hit, folks, he's crawling now, he's in pain, but he hasn't given up! NOT Jim Raeder!"^^
 
-Raeder lay in the aisle near the altar. He could hear a child's eager voice saying, "He went in there, Mr. Thompson. Hurry, you can still catch him!"^^
+		Raeder lay in the aisle near the altar. He could hear a child's eager voice saying, "He went in there, Mr. Thompson. Hurry, you can still catch him!"^^
 
-Wasn't a church considered a sanctuary? Raeder wondered.^^
+		Wasn't a church considered a sanctuary? Raeder wondered.^^
 
-Then the door was flung open, and Raeder realized that the custom was no longer observed. He gathered himself together and crawled past the altar, out of the back door of the church.]],
+		Then the door was flung open, and Raeder realized that the custom was no longer observed. He gathered himself together and crawled past the altar, out of the back door of the church.]],
+
 	obj =
 	{
 		vway("wayToGraveyard", "Go to {graveyard}.", 'graveyard')
@@ -761,7 +781,7 @@ graveyard = room
 	nam = "Graveyard",
 	dsc = [[He was in an old graveyard. He crawled past crosses and stars, past slabs of marble and granite, past stone tombs and rude wooden markers. A bullet exploded on a tombstone near his head, showering him with fragments. He crawled to the edge of an open grave.^^
 
-They had deceived him, he thought. All of those nice, average, normal people. Hadn't they said he was their representative? Hadn't they sworn to protect their own? But no, they loathed him. Why hadn't he seen it? Their hero was the cold, blank-eyed gunman: Thompson, Capone, Billy the Kid, Young Lochinvar, El Cid, Cuchulain, the man without human hopes or fears. They worshipped him, that dead, implacable robot gunman, and lusted to feel his foot in their face.]],
+		They had deceived him, he thought. All of those nice, average, normal people. Hadn't they said he was their representative? Hadn't they sworn to protect their own? But no, they loathed him. Why hadn't he seen it? Their hero was the cold, blank-eyed gunman: Thompson, Capone, Billy the Kid, Young Lochinvar, El Cid, Cuchulain, the man without human hopes or fears. They worshipped him, that dead, implacable robot gunman, and lusted to feel his foot in their face.]],
 	obj =
 	{
 		vway("wayToOpenGrave", "Go to {open grave}.", 'openGrave')
@@ -773,33 +793,31 @@ openGrave = room
 	nam = "Open Grave",
 	dsc = [[Raeder tried to move, and slid helplessly into the open grave.^^
 
-He lay on his back, looking at the blue sky. Presently a black silhouette loomed above him, blotting out the sky. Metal twinkled. The silhouette slowly took aim.^^
+		He lay on his back, looking at the blue sky. Presently a black silhouette loomed above him, blotting out the sky. Metal twinkled. The silhouette slowly took aim.^^
 
-And Raeder gave up all hope forever.^^
+		And Raeder gave up all hope forever.^^
 
-"Wait, Thompson!" roared the amplified voice of Mike Terry. The revolver wavered.^^
+		- "Wait, Thompson!" roared the amplified voice of Mike Terry. The revolver wavered.^^
 
-"It is one second past five o'clock! The week is up! JIM RAEDER HAS WON!"^^
+		- "It is one second past five o'clock! The week is up! JIM RAEDER HAS WON!"^^
 
-There was pandemonium of cheering from the studio audience.^^
+		There was pandemonium of cheering from the studio audience.^^
 
-The Thompson gang, gathered around the grave, looked sullen.^^
+		The Thompson gang, gathered around the grave, looked sullen.^^
 
-"He's won, friends, he's won!" Mike Terry cried. "Look, look on your screen! The police have arrived, they're taking the Thompson away from their victim—the victim they could not kill. And all this is thanks to you, Good Samaritans of America. Look folks, tender hands are lifting Jim Raeder from the open grave that was his final refuge. Good Samaritan Janice Morrow is there. Could this be the beginning of a romance? Jim seems to have fainted, friends; they're giving him a stimulant. He's won two hundred thousand dollars! Now we'll have a few words from Jim Raeder!"^^
+		- "He's won, friends, he's won!" Mike Terry cried. "Look, look on your screen! The police have arrived, they're taking the Thompson away from their victim—the victim they could not kill. And all this is thanks to you, Good Samaritans of America. Look folks, tender hands are lifting Jim Raeder from the open grave that was his final refuge. Good Samaritan Janice Morrow is there. Could this be the beginning of a romance? Jim seems to have fainted, friends; they're giving him a stimulant. He's won two hundred thousand dollars! Now we'll have a few words from Jim Raeder!"^^
 
-There was a short silence.^^
+		There was a short silence.^^
 
-"That's odd," said Mike Terry. "Folks, I'm afraid we can't hear from Jim just now. The doctors are examining him. Just one moment ..."^^
+		"That's odd," said Mike Terry. "Folks, I'm afraid we can't hear from Jim just now. The doctors are examining him. Just one moment ..."^^
 
-There was a silence. Mike Terry wiped his forehead and smiled.^^
+		There was a silence. Mike Terry wiped his forehead and smiled.^^
 
-"It's the strain, folks, the terrible strain. The doctor tells me ... Well, folks, Jim Raeder is temporarily not himself. But it's only temporary! JBC is hiring the best psychiatrists and psychoanalysts in the country. We're going to do everything humanly possible for this gallant boy. And entirely at our own expense."^^
+		"It's the strain, folks, the terrible strain. The doctor tells me ... Well, folks, Jim Raeder is temporarily not himself. But it's only temporary! JBC is hiring the best psychiatrists and psychoanalysts in the country. We're going to do everything humanly possible for this gallant boy. And entirely at our own expense."^^
 
-Mike Terry glanced at the studio clock. "Well, it's about^^
+		Mike Terry glanced at the studio clock. "Well, it's about time to sign off, folks. Watch for the announcement of our next great thrill show. And don't worry, I'm sure that very soon we'll have Jim Raeder back with us."^^
 
-time to sign off, folks. Watch for the announcement of our next great thrill show. And don't worry, I'm sure that very soon we'll have Jim Raeder back with us."^^
-
-Mike Terry smiled, and winked at the audience. "He's bound to get well, friends. After all, we're all pulling for him! "^^
+		Mike Terry smiled, and winked at the audience. "He's bound to get well, friends. After all, we're all pulling for him! "^^
 ^^
 ^^
 THE END.]]
