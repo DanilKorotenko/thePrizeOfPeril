@@ -31,8 +31,6 @@ watch = obj
 			return 'You have seven and a half hours to go.';
 		elseif here() == street then
 			return 'You have seven hours to go.';
-		elseif here() == mrsVelmaODellHouse then
-			return 'You have six and a half hours to go.'
 		elseif here() == subway then
 			return 'You have five hours to go.'
 		elseif here() == manhassetStation then
@@ -77,7 +75,7 @@ Is there no hope? Raeder silently echoed, perspiration pouring from him as he st
 
 "Wait a minute!" Mike Terry cried. "Hang on, Jim Raeder, hang on a little longer. Perhaps there is hope! I have an urgent call from one of our viewers, a call on the Good Samaritan Line! Here's someone who thinks he can help you, Jim. Are you listening, Jim Raeder?"^^
 
-Raeder waited, and heard the hinges tearing out of rotten wood.^^
+You are waiting, and hearing the hinges tearing out of rotten wood.^^
 
 "Go right ahead, sir," said Mike Terry. "What is your name, sir?"^^
 
@@ -95,8 +93,6 @@ Raeder pushed the television set into his pocket.]];
             
 		elseif here() == street then
 			return 'You have seven hours to go.';
-		elseif here() == mrsVelmaODellHouse then
-			return 'You have six and a half hours to go.'
 		elseif here() == subway then
 			return 'You have five hours to go.'
 		elseif here() == manhassetStation then --taxi
@@ -200,12 +196,13 @@ holeOnTheCeiling = obj
 windowOutlines = obj
 {
     nam = 'Outlines of the window';
-    dsc = [[You can see tiny outlines of the {window}.]];
+    dsc = [[You can see tiny {outlines} of the window.]];
     act = function(s)
-        p [[He located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. He cleared the jagged sill and quickly peered down.^^
+        p [[You located the outlines of the window and kicked. Glass shattered, and daylight poured startlingly in. You cleared the jagged sill and quickly peered down.^^
+
         Below was a long drop to a concrete courtyard.^^
 
-        The hinges tore free. He heard the door opening.]];
+        The hinges tore free. You heard the door opening.]];
         
         walk(courtyard);
         
@@ -217,7 +214,7 @@ hotelBathroom = room
 {
 	nam = 'Hotel Bathroom',
 	dsc = [[A tiny windowless bathroom.]],
-    enter = [[He crawled to the bathroom and stood up.]];
+    enter = [[You crawled to the bathroom and stood up.]];
     obj = 
     {
         holeOnTheCeiling
@@ -227,9 +224,9 @@ hotelBathroom = room
 courtyard = room
 {
 	nam = 'Courtyard',
-	dsc = [[Quickly Raeder climbed through the window, hung by his fingertips for a moment, and dropped.^^
+	dsc = [[Quickly you climbed through the window, hung by his fingertips for a moment, and dropped.^^
 
-The shock was stunning. Groggily he stood up. A face appeared at the bathroom window.^^
+The shock was stunning. Groggily you stood up. A face appeared at the bathroom window.^^
 
 "Tough luck," said the man, leaning out and taking careful aim with a snub-nosed .38.^^
 
@@ -246,31 +243,35 @@ The killer's shot went wide. He turned, cursing. More smoke bombs burst in the c
 street = room
 {
 	nam = '63rd Street',
-	dsc = [[HE walked down 63rd Street, slouching to minimize his height, staggering slightly from exertion, dizzy from lack of food and sleep.^^
+	dsc = [[You walking down 63rd Street, slouching to minimize your height, staggering slightly from exertion, dizzy from lack of food and sleep.^^
 
-"Hey, you!"^^
+- "Hey, you!"^^
 
-Raeder turned. A middle-aged woman was sitting on the steps of a brownstone, frowning at him.^^
+You turned. A middle-aged woman was sitting on the steps of a brownstone, frowning at him.^^
 
 "You're Raeder, aren't you? The one they're trying to kill?"^^
 
-Raeder started to walk away.^^
+You started to walk away.^^
 
 "Come inside here, Raeder," the woman said.^^
 
-Perhaps it was a trap. But Raeder knew that he had to depend upon the generosity and good-heartedness of the people. He was their representative, a projection of themselves, an average guy in trouble. Without them, he was lost. With them, nothing could harm him.^^
+Perhaps it was a trap. But you knew that you had to depend upon the generosity and good-heartedness of the people. You was their representative, a projection of themselves, an average guy in trouble. Without them, you was lost. With them, nothing could harm you.^^
 
 Trust in the people, Mike Terry had told him. They'll never let you down.]],
+
 	obj =
 	{
-		vway("wayToMrsVelmaODellHouse", "Go to {Mrs. Velma O'Dell house}.", 'mrsVelmaODellHouse')
+		vway("wayToMrsVelmaODellHouse", "Go to {Mrs. Velma O'Dell house}.", 'missisHouseDialog')
 	}
 }
 
-mrsVelmaODellHouse = room
+missisHouseDialog = dlg
 {
-	nam = "Mrs. Velma O'Dell house",
-	dsc = [[He followed the woman into her parlor. She told him to sit down and left the room, returning almost immediately with a plate of stew. She stood watching him while he ate, as one would watch an ape in the zoo eat peanuts.^^
+    nam = "Mrs. Velma O'Dell house";
+
+    hideinv = true;
+
+    entered = [[He followed the woman into her parlor. She told him to sit down and left the room, returning almost immediately with a plate of stew. She stood watching him while he ate, as one would watch an ape in the zoo eat peanuts.^^
 
 Two children came out of the kitchen and stared at him.^^
 
@@ -278,15 +279,18 @@ Three overalled men came out of the bedroom and focused a television camera on h
 
 "There he is, folks," Terry was saying. "There's Jim Raeder now, eating his first square meal in two days. Our camera crews have really been working to cover this for you! Thanks, boys ... Folks, Jim Raeder has been given a brief sanctuary by Mrs. Velma O'Dell, of three forty-three Sixty-Third Street. Thank you, Good Samaritan O'Dell! It's really wonderful how people from all walks of life have taken Jim Raeder to their hearts!"^^
 
-"You better hurry," Mrs. O'Dell said.^^
+"You better hurry," Mrs. O'Dell said.]];
 
-"Yes, ma'am," Raeder said.^^
-
-"I don't want no gunplay in my apartment."^^
-
-"I'm almost finished, ma'am."^^
-
-One of the children asked, `Aren't they going to kill him?"^^
+    phr = 
+    {
+        { 1, 
+			[["Yes, ma'am," You said.]], 
+    	    [[- "I don't want no gunplay in my apartment."]], 
+			code [[ pon(2) ]] 
+        };
+        { 2, false, 
+			[["I'm almost finished, ma'am."]], 
+			[[One of the children asked, `Aren't they going to kill him?"^^
 
 "Shut up," said Mrs. O'Dell.^^
 
@@ -300,23 +304,24 @@ Raeder hadn't realized until now that he'd cut his hand on the windowsill.^^
 
 "He has a disguise, folks!" Mike Terry cried delightedly. "This is something new! A disguise! With seven hours to go until he's safe!"^^
 
-"Now get out of here," Mrs. O'Dell said.^^
+"Now get out of here," Mrs. O'Dell said.]],
+			code [[ pon(3) ]] 
+		};
+		{3, false,
+			[["I'm going, ma'am," You said. "Thanks."]],
+			[["I think you're stupid," she said. "I think you're stupid to be involved in this."]],
+			[[pon(4)]]
+		};
+		{4, false,
+			[["Yes, ma'am."]],
+			[[- "It just isn't worth it."^^
+			
+			Raeder thanked her and left. He walked to Broadway, caught a subway to 59th Street, then an uptown local to 86th. There he bought a newspaper and changed for the Manhasset through-express.^^
 
-"I'm going, ma'am," Raeder said. "Thanks."^^
-
-"I think you're stupid," she said. "I think you're stupid to be involved in this."^^
-
-"Yes, ma'am."^^
-
-"It just isn't worth it."^^
-
-Raeder thanked her and left. He walked to Broadway, caught a subway to 59th Street, then an uptown local to 86th. There he bought a newspaper and changed for the Manhasset through-express.^^
-
-He glanced at his watch. He had six and a half hours to go.]],
-	obj =
-	{
-		vway("wayToSubway", "Go to {Subway}.", 'subway')
-	}
+			He glanced at his watch. He had six and a half hours to go.]],
+			[[walk(subway)]]
+		}
+    }
 }
 
 subway = room
