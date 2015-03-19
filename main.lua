@@ -90,6 +90,7 @@ You are waiting, and hearing the hinges tearing out of rotten wood.^^
     }
 }
 
+-- TODO: TV Set in hotel room.
 TVSet = obj
 {
 	nam = "Listen to TV Set",
@@ -98,8 +99,12 @@ TVSet = obj
 			walk(hotelBathroomTVSet);
 		elseif here() == courtyard then
 
-			return [[He could hear Mike Terry's frenzied voice over the TV set in his pocket. "Now run for it!" Terry was screaming. "Run, Jim Raeder, run for your life. Run now, while the killers' eyes are filled with smoke. And thank Good Samaritan Sarah Winters, of three four one two Edgar Street, Brockton, Mass., for donating five smoke bombs and employing the services of a man to throw them!" In a quieter voice, Terry continued. "You've saved a man's life today, Mrs. Winters. Would you tell our audience how it—" Raeder wasn't able to hear any more. He was running through the smoke-filled courtyard, past clotheslines, into the open street.]];
-            
+			return [[You could hear Mike Terry's frenzied voice over the TV set in your pocket:^^
+
+		- "Now run for it!" Terry was screaming. "Run, Jim Raeder, run for your life. Run now, while the killers' eyes are filled with smoke. And thank Good Samaritan Sarah Winters, of three four one two Edgar Street, Brockton, Mass., for donating five smoke bombs and employing the services of a man to throw them!" In a quieter voice, Terry continued. "You've saved a man's life today, Mrs. Winters. Would you tell our audience how it—..."^^
+		
+		You are unable to hear any more. You are running through the smoke-filled courtyard, past clotheslines, into the open street.]];
+
 		elseif here() == street then
 			return 'You have seven hours to go.';
 		elseif here() == subway then
@@ -131,8 +136,11 @@ windowsill = obj
     dsc = [[This room has a {window}.]];
     act = function(s)
         objs():add('bulletHole');
-        p [[RAEDER lifted his head cautiously above the windowsill. He saw the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As he watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. Raeder ducked down. A bullet smashed through the window above his head and punctured the ceiling, showering him with plaster.^^
-Now he knew about the alley. It was guarded, just like the door.]];
+        p [[You lifted your head cautiously above the windowsill.^
+		You see the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As you watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. You ducked down. A bullet smashed through the window above your head and punctured the ceiling, showering you with plaster.^^
+
+Now you know about the alley. It is guarded, just like the door.]];
+
     end;
 };
 
@@ -146,29 +154,16 @@ Now he knew about the alley. It was guarded, just like the door.]];
 
 --He rolled onto his stomach and surveyed the dingy cold-water apartment into which the killers had driven him. 
 
-door = obj
-{
-    nam = 'Door';
-    dsc = [[This room has a {door}.]];
-    act = [[The door is watched.]];
-};
-
-fireEscape = obj
-{
-    nam = 'Fire Escape';
-    dsc = [[This room has a {fire escape}]];
-    act = [[The fire escape is watched.]];
-};
-
 doorToBathroom = obj
 {
     nam = 'Door to Bathroom';
-    dsc = [[This room has a {door to bathroom}]];
+    dsc = [[You can crawl to the {bathroom}]];
     act = function(s)
         walk(hotelBathroom);
     end;
 };
 
+-- TODO: More description for hotel room. Need to explain story background.
 hotelRoom = room
 {
 	nam = 'Hotel Room',
@@ -180,11 +175,13 @@ hotelRoom = room
 			s.enterFirstly = false;
 		end
 	end,
-	dsc = [[He lay at full length on the cracked linoleum, listening to the sounds outside the door. It was a perfect little one-room coffin. ]],
+	dsc = 
+	[[You are laying at full length on the cracked linoleum, listening to the sounds outside the door. It is a perfect little one-room coffin.^^
+
+	There is two gunman on the stairs, so the doors is well watched.]],
 	obj =
 	{
         windowsill,
-        door,
         doorToBathroom
 	}
 }
@@ -192,8 +189,8 @@ hotelRoom = room
 holeOnTheCeiling = obj
 {
     nam = 'Ragged hole';
-    dsc = [[There was a ragged {hole} in the ceiling, almost four inches wide. If he could enlarge it, crawl through into the apartment above...]];
-    act = [[He studied the hole in the ceiling. No use even considering it. He could never enlarge it in time.]];
+    dsc = [[There was a ragged {hole} in the ceiling, almost four inches wide. If you could enlarge it, crawl through into the apartment above...]];
+    act = [[You studied the hole in the ceiling. No use even considering it. You could never enlarge it in time.]];
 }
 
 windowOutlines = obj
@@ -234,7 +231,7 @@ hotelBathroom = room
 courtyard = room
 {
 	nam = 'Courtyard',
-	dsc = [[Quickly you climbed through the window, hung by his fingertips for a moment, and dropped.^^
+	dsc = [[Quickly you climbed through the window, hung by your fingertips for a moment, and dropped.^^
 
 The shock was stunning. Groggily you stood up. A face appeared at the bathroom window.^^
 
