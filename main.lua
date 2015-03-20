@@ -123,24 +123,34 @@ TVSet = obj
 	end,
 }
 
-bulletHole = obj
+hotelWindow = obj
 {
-    nam = 'Bullet Hole',
-    dsc = 'You see the {bullet hole} on the ceiling.',
-    act = [[This hole was made by the watcher on the alley.]];
-};
+    nam = 'Hotel window';
+	var 
+	{
+		isObserved = false
+	},
 
-windowsill = obj
-{
-    nam = 'Windowsill';
-    dsc = [[This room has a {window}.]];
+    dsc = function(s)
+		return [[Look out of the {window}.^]];
+	end;
+
     act = function(s)
-        objs():add('bulletHole');
-        p [[You lifted your head cautiously above the windowsill.^
-		You see the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As you watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. You ducked down. A bullet smashed through the window above your head and punctured the ceiling, showering you with plaster.^^
+		if s.isObserved == true then
+			return [[You don't want to look out of the window oncemore. It is dangerous.]];
+		else
+			s.isObserved = true;
+			hotelRoom.isBulletHolePresent = true;
+	        p [[You lifted your head cautiously above the windowsill.^
+				You see the fire-escape, and below it a narrow alley. There was a weather-beaten baby carriage in the alley and three garbage cans. As you watched, a black-sleeved arm moved from behind the furthest can, with something shiny in its fist. You ducked down. A bullet smashed through the window above your head and punctured the ceiling, showering you with plaster.^^
 
-Now you know about the alley. It is guarded, just like the door.]];
-
+				Now you know about the alley. It is guarded]];
+			if door.isObserved == true then
+				p [[, just like the door.]];
+			else
+				p [[.]];
+			end;
+		end;
     end;
 };
 
@@ -154,20 +164,49 @@ Now you know about the alley. It is guarded, just like the door.]];
 
 --He rolled onto his stomach and surveyed the dingy cold-water apartment into which the killers had driven him. 
 
+door = obj
+{
+    nam = 'Door';
+	var 
+	{ 
+		isObserved = false
+	},
+    dsc = function(s)
+		return [[Try to go out through the {door}.^]];
+	end;
+
+    act = function(s)
+		if s.isObserved == true then
+			return [[The door is watched by killers, and there is no sence to touch the door.]];
+		else
+			s.isObserved = true;
+			return [[Cautiosly, you looked out of the door.^^
+
+				- "Here is he!!!!!", cried someone of two killers from the stairs.^^
+				
+				Quickly you hided back to room, and two bullets overshot you.]];
+		end;
+	end;
+};
+
 doorToBathroom = obj
 {
     nam = 'Door to Bathroom';
-    dsc = [[You can crawl to the {bathroom}]];
+    dsc = [[Сrawl to the {bathroom}.^]];
     act = function(s)
         walk(hotelBathroom);
     end;
 };
 
--- TODO: More description for hotel room. Need to explain story background.
+-- TODO: More description for hotel room. Need to explain story background. Player very quickly come to the trap.
 hotelRoom = room
 {
 	nam = 'Hotel Room',
-	var { enterFirstly = true },
+	var 
+	{ 
+		enterFirstly = true,
+		isBulletHolePresent = false
+	},
 	enter = function(s,f)
 		if s.enterFirstly == true then
 			inv():add('watch');
@@ -175,13 +214,17 @@ hotelRoom = room
 			s.enterFirstly = false;
 		end
 	end,
-	dsc = 
-	[[You are laying at full length on the cracked linoleum, listening to the sounds outside the door. It is a perfect little one-room coffin.^^
-
-	There is two gunman on the stairs, so the doors is well watched.]],
+	dsc = function(s)
+		p [[You are laying at full length on the cracked linoleum,]];
+		if s.isBulletHolePresent == true then
+			p [[staring at the bullet hole in the ceiling,]];
+		end;
+		p [[listening to the sounds outside the door. It is a perfect little one-room coffin.]];
+	end;
 	obj =
 	{
-        windowsill,
+        hotelWindow,
+        door,
         doorToBathroom
 	}
 }
