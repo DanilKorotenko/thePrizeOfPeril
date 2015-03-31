@@ -1,5 +1,5 @@
 -- $Name:The Prize of Peril$
--- $Version:1.0.0$
+-- $Version:0.51$
 
 instead_version "1.8.2"
 require "hideinv"
