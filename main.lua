@@ -78,14 +78,14 @@ hotelBathroomTVSet = dlg
 		- "Don't be nervous, Mr. Bartholemow. Go right ahead"^^
 
 		- "Well, okay. Mr. Raeder," said an old man's shaking voice, "I used to live at one five six West End Avenue. Same apartment you're trapped in, Mr. Raeder fact! Look, that bathroom has got a window, Mr. Raeder. It's been painted over, but it has got a—....."]];
-    phr = 
+    phr =
     {
-        { 1, [[Push the television set into your pocket.]], 
-            [[You pushed the television set into your pocket.]], 
+        { 1, [[Push the television set into your pocket.]],
+            [[You pushed the television set into your pocket.]],
             [[
 				objs(hotelBathroom):add('windowOutlines');
 				walk(hotelBathRoom);
-			]] 
+			]]
         };
     }
 }
@@ -102,7 +102,7 @@ TVSet = obj
 			return [[You could hear Mike Terry's frenzied voice over the TV set in your pocket:^^
 
 			- "Now run for it!" Terry was screaming. "Run, Jim Raeder, run for your life. Run now, while the killers' eyes are filled with smoke. And thank Good Samaritan Sarah Winters, of three four one two Edgar Street, Brockton, Mass., for donating five smoke bombs and employing the services of a man to throw them!" In a quieter voice, Terry continued. "You've saved a man's life today, Mrs. Winters. Would you tell our audience how it—..."^^
-		
+
 			You are unable to hear any more.]];
 
 		elseif here() == street then
@@ -126,7 +126,7 @@ TVSet = obj
 hotelWindow = obj
 {
     nam = 'Hotel window';
-	var 
+	var
 	{
 		isObserved = false
 	},
@@ -162,13 +162,13 @@ hotelWindow = obj
 
 -- Raeder bit his lip sharply. He wanted to live. There had to be a way.^^
 
---He rolled onto his stomach and surveyed the dingy cold-water apartment into which the killers had driven him. 
+--He rolled onto his stomach and surveyed the dingy cold-water apartment into which the killers had driven him.
 
 door = obj
 {
     nam = 'Door';
-	var 
-	{ 
+	var
+	{
 		isObserved = false
 	},
     dsc = function(s)
@@ -183,7 +183,7 @@ door = obj
 			return [[Cautiosly, you looked out of the door.^^
 
 				- "Here is he!!!!!", cried someone of two killers from the stairs.^^
-				
+
 				Quickly you hided back to room, and two bullets overshot you.]];
 		end;
 	end;
@@ -202,8 +202,8 @@ doorToBathroom = obj
 hotelRoom = room
 {
 	nam = 'Hotel Room',
-	var 
-	{ 
+	var
+	{
 		enterFirstly = true,
 		isBulletHolePresent = false
 	},
@@ -248,9 +248,9 @@ windowOutlines = obj
         Below was a long drop to a concrete courtyard.^^
 
         The hinges tore free. You heard the door opening.]];
-        
+
         walk(courtyard);
-        
+
         return;
     end;
 }
@@ -265,7 +265,7 @@ hotelBathroom = room
 		They are smashing against the door, grunting each time they struck. Soon the lock would tear out, or the hinges would pull out of the rotting wood. The door would go down, and the two blank-faced men would enter, dusting off their jackets ...]],
 
     enter = [[You crawled to the bathroom and stood up.]];
-    obj = 
+    obj =
     {
         holeOnTheCeiling
     };
@@ -331,15 +331,15 @@ missisHouseDialog = dlg
 
 		- "You better hurry," Mrs. O'Dell said.]];
 
-    phr = 
+    phr =
     {
-        { 1, 
-			[["Yes, ma'am," You said.]], 
-    	    [[- "I don't want no gunplay in my apartment."]], 
-			code [[ pon(2) ]] 
+        { 1,
+			[["Yes, ma'am," You said.]],
+    	    [[- "I don't want no gunplay in my apartment."]],
+			code [[ pon(2) ]]
         };
-        { 2, false, 
-			[["I'm almost finished, ma'am."]], 
+        { 2, false,
+			[["I'm almost finished, ma'am."]],
 			[[One of the children asked, `Aren't they going to kill him?"^^
 
 			- "Shut up," said Mrs. O'Dell.^^
@@ -355,7 +355,7 @@ missisHouseDialog = dlg
 			- "He has a disguise, folks!" Mike Terry cried delightedly. "This is something new! A disguise! With seven hours to go until he's safe!"^^
 
 			- "Now get out of here," Mrs. O'Dell said.]],
-			code [[ pon(3) ]] 
+			code [[ pon(3) ]]
 		};
 		{3, false,
 			[["I'm going, ma'am," You said. "Thanks."]],
@@ -365,7 +365,7 @@ missisHouseDialog = dlg
 		{4, false,
 			[["Yes, ma'am."]],
 			[[- "It just isn't worth it."^^
-			
+
 			You thanked her and left. You walked to Broadway, caught a subway to 59th Street, then an uptown local to 86th. There you bought a newspaper and changed for the Manhasset through-express.^^
 
 			You glanced at your watch. You had six and a half hours to go.]],
@@ -508,13 +508,13 @@ taxidlg = dlg
     entered = [[At the Manhasset station, you stepped into a taxi and told the driver to take you to New Salem.^^
 
         "New Salem?" the driver asked, looking at you in the rear-vision mirror.]];
-    phr = 
+    phr =
     {
-        { 1, [[That's right.]], 
+        { 1, [[That's right.]],
             [[The driver snapped on his radio.^^
              - "Fare to New Salem. Yep, that's right. New Salem." They drove off.^^
-             You frowned, wondering if it had been a signal. It was perfectly usual for taxi drivers to report to their dispatchers, of course. But something about the man's voice ...]], 
-             code [[ pon(2) ]] 
+             You frowned, wondering if it had been a signal. It was perfectly usual for taxi drivers to report to their dispatchers, of course. But something about the man's voice ...]],
+             code [[ pon(2) ]]
         };
         { 2, false, always = true, [[Let me off here.]], [[- "No problem.", the driver reported.]],[[walk(countryRoad)]]}
     }
@@ -524,7 +524,7 @@ countryRoad = room
 {
 	nam = "Country Road",
 	dsc = [[He paid the driver and began walking down a narrow country road that curved through sparse woods. The trees were too small and too widely separated for shelter. Raeder walked on, looking for a place to hide. ^^
-    
+
 		There was a heavy truck approaching. He kept on walking, pulling his hat low on his forehead. But as the truck drew near, he heard a voice from the television set in his pocket. It cried, "Watch out!"^^
 
 		He flung himself into the ditch. The truck careened past, narrowly missing him, and screeched to a stop. The driver was shouting, "There he goes! Shoot, Harry, shoot!"^^
@@ -561,11 +561,11 @@ carDialog = dlg
 	nam = "Janice Morrow car",
     hideinv = true;
     entered = [[- "Hurry!" cried the blond young woman driving it.^^
-    
+
         You dived in.^^
-    
+
         The woman made a U-turn on the highway. A bullet smashed through the windshield. She stamped on the accelerator, almost running down the lone killer who stood in the way.^^
-        
+
         The car surged away before the truck was within firing range.^^
 
         Raeder leaned back and shut his eyes tightly. The woman concentrated on her driving, watching for the truck in her rear-vision mirror.^^
@@ -575,15 +575,15 @@ carDialog = dlg
 		- "Jim Raeder has been plucked again from the jaws of death, thanks to Good Samaritan Janice Morrow of four three three Lexington Avenue, New York City. Did you ever see anything like it, folks? The way Miss Morrow drove through a fusillade of bullets and plucked Jim Raeder from the mouth of doom! Later we'll interview Miss Morrow and get her reactions. Now, while Jim Raeder speeds away—perhaps to safety, perhaps to further peril—we'll have a short announcement from our sponsor. Don't go away! Jim's got four hours and ten minutes until he's safe: Anything can happen!"^^
 
 		- "Okay," the girl said. "We're off the air now. Raeder, what in the hell is the matter with you?"]];
- 
-    phr = 
+
+    phr =
     {
-        {1, 
+        {1,
             [["Eh?" Raeder asked. The girl was in her early twenties. She looked efficient, attractive, untouchable. Raeder noticed that she had good features, a trim figure. And he noticed that she seemed angry.^^
 
 			- "Miss," he said, "I don't know how to thank you for—"]],
 
-            [[ - "Talk straight," Janice Morrow said. "I'm no Good Samaritan. I'm employed by the JBC network."]], 
+            [[ - "Talk straight," Janice Morrow said. "I'm no Good Samaritan. I'm employed by the JBC network."]],
 
             [[pon(2)]]
         };
